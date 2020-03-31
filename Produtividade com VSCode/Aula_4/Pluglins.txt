@@ -1,0 +1,9 @@
+Pluglins:
+
+Aula 10 - Bracket Pair Colorized
+
+Aula 11 - vscode icons
+
+Aula 12 - GitLens
+
+Aula 13 - TODO Tree
