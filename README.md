@@ -16,3 +16,12 @@ call env/scripts/activate: iniciar o novo ambiente para execução de códigos e
 - `python manage.py runserver`: iniciar servidor (usar depois do comando call env/scripts/activate - na pasta anterior a api_todo raiz)
 
 - `pip install ipython`: instalação de terminal mais robusto
+
+**REST API With Flask and Python**
+
+Lista de comandos - 
+
+- `python -m pip install virtualenv`: instalar o ambiente virtual
+- `python -m virtualenv venv`: criar ambiente virtual na pasta designada
+- `.\venv\Scripts\activate venv`: ativar ambiente virtual mudando o prompt
+- `pip install flask`: instalar pacote Flask no ambiente virutal já iniciado
