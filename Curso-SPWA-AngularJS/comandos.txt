@@ -1,3 +1,0 @@
-----> fazer o comando de server na pasta raiz
-npm install -g browser-sync -> instalar o Browser Sync após já ter instalado o Node.JS
-browser-sync start --server --directory --files "**/*" -> iniciar server localmente a partir da pasta selecionada

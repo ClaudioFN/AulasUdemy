@@ -25,3 +25,11 @@ Lista de comandos -
 - `python -m virtualenv venv`: criar ambiente virtual na pasta designada
 - `.\venv\Scripts\activate venv`: ativar ambiente virtual mudando o prompt
 - `pip install flask`: instalar pacote Flask no ambiente virutal já iniciado
+
+
+**Single Page Web Applications with AngularJS**
+
+Lista de comandos - 
+
+- `npm install -g browser-sync`: instalar o Browser Sync após já ter instalado o Node.JS. Serve para iniciar ambiente WEB local.
+- `browser-sync start --server --directory --files "**/*"`: iniciar server localmente a partir da pasta selecionada (normalmente a pasta raiz do projeto).
