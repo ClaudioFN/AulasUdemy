@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="ControllerApp">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script src="../1-angularJS/angular.min.js" type="text/javascript"></script>
+        <script src="app.js"></script>
+        <title>Single Page WEB Application With Angular - Filters</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+        <link rel="icon" href="https://angular.io/assets/images/favicons/favicon-194x194.png">
+    </head>
+    <body>
+        <h1>Controller as Syntax</h1>
+        <div ng-controller="ParentController1">
+            <div ng-controller="ChildController1">
+
+            </div>
+        </div>
+
+        <div ng-controller="ParentController2 as parent">
+            <p>Parent value: {{ parent.value }}</p>
+            <div ng-controller="ChildController2 as child">
+                <p>Child value: {{ child.value }}</p>
+                <p>Parent value: {{ parent.value }}</p>
+            </div>
+        </div>
+    </body>
+</html>

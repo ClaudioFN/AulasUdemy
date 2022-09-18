@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app='MsgApp'>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script src="../1-angularJS/angular.min.js" type="text/javascript"></script>
+        <script src="app.js"></script>
+        <title>Single Page WEB Application With Angular - Interpolation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Expressions and Interpolations</h1>
+        <div ng-controller='MsgController'>
+            Message is: <br>
+            {{sayMessage()}} 
+            <div>
+                <button ng-click="testButton()">Test Button</button>
+                <br>
+                <img ng-src="../2-images/image{{option}}.png">
+            </div>
+        </div>
+    </body>
+</html>

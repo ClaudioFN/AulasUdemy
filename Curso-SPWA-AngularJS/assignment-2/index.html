@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app='ShoppingListCheckOff'>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script src="../1-angularJS/angular.min.js" type="text/javascript"></script>
+        <script src="app.js"></script>
+        <title>Single Page WEB Application With Angular - Assignment 2</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+        <link rel="icon" href="https://angular.io/assets/images/favicons/favicon-194x194.png">
+    </head>
+    <body>
+        <h2>Assignment 2 - Shopping List</h2>
+        <div ng-controller='ToBuyController as list'>
+            <h4><p style="color: blue;">To Buy:</p></h4>
+            <ul>
+                <li ng-repeat="item in list.items"> 
+                    Buy {{ item.quantity }} {{  item.name }} 
+                    - <button ng-click="list.removeItem($index);">Bought</button>
+                </li>
+            </ul>
+            <div ng-if="messageToBuy"><p style="color:red;">Message: Everything is bought!</p></div>
+        </div> 
+        <div ng-controller='AlreadyBoughtController as listBought'>
+            <h4><p style="color: green;">Already Bought:</p></h4>
+            <ul>
+                <li ng-repeat="item in listBought.items"> 
+                    Bought {{ item.quantity }} {{  item.name }} 
+                </li>
+            </ul>
+            <div ng-if="!listBought.items[0]"><p style="color:red;">Message: {{listBought.messageBought}}</p></div>
+            <br>
+        </div>          
+    </body>
+</html>

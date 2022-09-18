@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app='ShoppingListApp'>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script src="../1-angularJS/angular.min.js" type="text/javascript"></script>
+        <script src="app.js"></script>
+        <title>Single Page WEB Application With Angular - NG-Repeat</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+        <link rel="icon" href="https://angular.io/assets/images/favicons/favicon-194x194.png">
+    </head>
+    <body>
+        <h1>NG-Repeat</h1>
+        <div ng-controller='ShoppingListController'>
+            <h3>Shopping List: </h3>
+            <ul>
+                <li ng-repeat="item in shoppingList1"> {{ item }} </li>
+            </ul>
+            <br>
+            <ul>
+                <li ng-repeat="item in shoppingList2"> {{ item.quantity }} of {{  item.name }} </li>
+            </ul>
+            <br>
+            <input type="text" ng-model="shoppingList2[0].quantity">
+            <ul>
+                <li ng-repeat="item in shoppingList2"> {{ $index + 1 }} - {{ item.quantity }} of {{  item.name }} </li>
+            </ul>
+            <input type="text" ng-model="newItemName" placeholder="Item Name">
+            <input type="text" ng-model="newItemQuantity" placeholder="Item Quantity">
+            <button ng-click="addToList()">Add To List</button>
+            <br>
+            <br>
+            <input type="text" ng-model="search" placeholder="Search Here!">
+            <ul>
+                <li ng-repeat="item in shoppingList1 | filter : search"> {{ item }} </li>
+            </ul>
+        </div>
+    </body>
+</html>
