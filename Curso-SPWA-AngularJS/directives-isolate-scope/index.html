@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app='ShoppingListDirectiveApp'>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <script src="../1-angularJS/angular.min.js" type="text/javascript"></script>
+      <script src="app.js"></script>
+      <title>Single Page WEB Application With Angular - Directives With Isolate Scope</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <h1>Directives With Isolate Scope</h1>
+
+    <!-- LIST #1 - unlimited items -->
+    <div id="list" ng-controller='ShoppingListController as list'>
+      <input type="text" ng-model="list.itemName" placeholder="Item Name">
+      <input type="text" ng-model="list.itemQuantity" placeholder="Quantity">
+      <button ng-click="list.addItem();">Add Item</button>
+
+      <shopping-list items="list.items" title="{{list.title}}"></shopping-list>
+      <!--<div ng-if="list1.errorMessage" class="error">Error: {{list1.errorMessage}}</div>-->
+    </div>
+
+    <!-- LIST #2 (limited to 3 items) -->
+    <div id="list2" ng-controller='ShoppingListController2 as list2'>
+      <input type="text" ng-model="list2.itemName" placeholder="Item Name">
+      <input type="text" ng-model="list2.itemQuantity" placeholder="Quantity">
+      <button ng-click="list2.addItem();">Add Item</button>
+
+      <shopping-list my-list="list2" title="{{list2.title}}"></shopping-list>
+      <div ng-if="list2.errorMessage" class="error">Error: {{list2.errorMessage}}</div>
+    </div>
+
+  </body>
+</html>
