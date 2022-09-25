@@ -1,0 +1,21 @@
+<h2>Search Complete - Result</h2>
+<div ng-if="list.isEmpty()">Nothing found(yet)!</div>
+
+<div>
+  <table>
+      <thead>
+        <tr>
+          <th>Menu Item</th>
+          <th>Description</th>
+          <th>Remove?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in list.found">
+            <td>{{item.name}} - </td>
+            <td>{{item.description}} - </td>
+            <td><button ng-click="list.onRemove({index: $index});">Don't want this one!</button></td>
+        </tr>
+      </tbody>
+  </table>
+<div>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app='NarrowItDownApp'>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <script src="../1-angularJS/angular.min.js" type="text/javascript"></script>
+      <script src="app.js"></script>
+      <title>Single Page WEB Application With Angular - Assignment 3 - The Search</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <h1>Assignment 3 - The Search</h1>
+    <div ng-controller='NarrowItDownController as menu'>
+      <h3>The Search</h3>
+      <input type="text" ng-model="menu.name" placeholder="Item name">
+      <button ng-click="menu.search(menu.name);">Narrow It Down For Me!</button>
+      <!-- Error defined to be shown when no data is typed -->
+      <div ng-hide="!menu.error"><p style="color:red;">Error: {{menu.error}}</p></div>
+      <br>
+      <!-- Call to the found.html in the search of the item type (hide till items are searched) -->
+      <div ng-hide="!menu.items">
+        <found-items found="menu.items" on-remove="menu.removeItem(index)"></found-items>
+      </div>
+    </div>
+  </body>
+</html>
