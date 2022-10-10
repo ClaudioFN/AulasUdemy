@@ -1,3 +1,9 @@
 ----> fazer o comando de server na pasta raiz
 npm install -g browser-sync -> instalar o Browser Sync após já ter instalado o Node.JS
 browser-sync start --server --directory --files "**/*" -> iniciar server localmente a partir da pasta selecionada
+
+
+Fake e-mail: fokis83489@deitada.com / Senha: heroku@123
+https://coursera-client-site.herokuapp.com/ | https://git.heroku.com/coursera-client-site.git
+
+-- Desinstalar o Heroku ao completar este assunto
