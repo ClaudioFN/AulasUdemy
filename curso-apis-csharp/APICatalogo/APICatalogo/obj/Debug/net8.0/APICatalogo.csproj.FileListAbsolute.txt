@@ -111,3 +111,4 @@ C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\ob
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\obj\Debug\net8.0\APICatalogo.genruntimeconfig.cache
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\obj\Debug\net8.0\ref\APICatalogo.dll
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
