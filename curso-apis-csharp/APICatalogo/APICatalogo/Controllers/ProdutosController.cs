@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace APICatalogo.Controllers
 {
-    [Route("[controller]")]
+    [Route("[controller]")] // Produtos
     [ApiController]
     public class ProdutosController : ControllerBase
     {
@@ -17,31 +17,58 @@ namespace APICatalogo.Controllers
             _context = context;
         }
 
+        // /produtos/
+        /*[HttpGet]
+        public async Task<ActionResult<IEnumerable<Produto>>> Get2()
+        {
+                return await _context.Produtos.Take(10).AsNoTracking().ToListAsync(); 
+
+        }*/
+
+        // /produtos/
         [HttpGet]
         public ActionResult<IEnumerable<Produto>> Get()
         {
-            var produtos = _context.Produtos.ToList();
-
-            if (produtos is null)
+            try
             {
-                return NotFound("Nenhum Produto encontrado!");
+                var produtos = _context.Produtos.Take(10).AsNoTracking().ToList(); // AsNoTracking = impede rastreio do estado dos objetos e armazenamento em cache que sobrecarregue a aplicacao
+                                                                                   // Take = limitar a quantidade trazida para a aplicacao
+                if (produtos is null)
+                {
+                    return NotFound("Nenhum Produto encontrado!");
+                }
+                return produtos;
             }
-            return produtos;
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Ocorreu um erro ao obter os Produtos: {ex.Message}" );
+            }
+
         }
 
-        [HttpGet("{id:int}", Name = "ObterProduto")]
+        // /produtos/{id}
+        [HttpGet("{id:int:min(1)}", Name = "ObterProduto")]
         public ActionResult<Produto> Get(int id)
         {
-            var produto = _context.Produtos.FirstOrDefault(p => p.ProdutoId == id);
-
-            if (produto is null)
+            try
             {
-                return NotFound("O Produto especificado não foi encontrado!");
+                var produto = _context.Produtos.Take(10).FirstOrDefault(p => p.ProdutoId == id);
+
+                if (produto is null)
+                {
+                    return NotFound("O Produto especificado não foi encontrado!");
+                }
+
+                return produto;
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Ocorreu um erro ao obter o Produto especificado {id}: {ex.Message}");
             }
 
-            return produto;
         }
 
+        // /produtos/
         [HttpPost]
         public ActionResult Post(Produto produto)
         {
@@ -54,18 +81,27 @@ namespace APICatalogo.Controllers
             return new CreatedAtRouteResult("ObterProduto", new { id = produto.ProdutoId }, produto);
         }
 
+        // /produtos/{id}
         [HttpPut("{id:int}")]
         public ActionResult Put(int id, Produto produto)
         {
-            if(id != produto.ProdutoId)
+            try
             {
-                return BadRequest();
+                if (id != produto.ProdutoId)
+                {
+                    return BadRequest();
+                }
+
+                _context.Entry(produto).State = EntityState.Modified;
+                _context.SaveChanges();
+
+                return Ok();
+            }
+            catch (Exception ex) 
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Ocorreu um erro ao alterar o Produto {id}: {ex.Message}");
             }
 
-            _context.Entry(produto).State = EntityState.Modified;
-            _context.SaveChanges();
-
-            return Ok();
 
         }
 
@@ -73,17 +109,25 @@ namespace APICatalogo.Controllers
         [HttpDelete("{id:int}")]
         public ActionResult Delete(int id)
         {
-            var produto = _context.Produtos.FirstOrDefault(p => p.ProdutoId == id);
-
-            if(produto is null)
+            try
             {
-                return NotFound("Produto não encontrado para DELETE!");
+                var produto = _context.Produtos.FirstOrDefault(p => p.ProdutoId == id);
+
+                if (produto is null)
+                {
+                    return NotFound("Produto não encontrado para DELETE!");
+                }
+
+                _context.Produtos.Remove(produto);
+                _context.SaveChanges();
+
+                return Ok(produto);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Ocorreu um erro ao deletar o Produto {id}: {ex.Message}");
             }
 
-            _context.Produtos.Remove(produto);
-            _context.SaveChanges();
-
-            return Ok(produto);
         }
     }
 }

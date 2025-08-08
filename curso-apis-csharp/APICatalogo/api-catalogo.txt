@@ -1,0 +1,47 @@
+Aulas 49 até 52 (04-08):
+Serialização JSON alterada na classe Program.cs e incluindo na linha do código 
+builder.Services.AddControllers();
+esse item:
+.AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+-- 
+Otimização da API usando AsNoTracking para limitação de cache de rastreio armazenado e Take ou Where para filtros e limitar a quantidade 
+de registros trazidos para a funcionalidade.
+--
+Uso de Try-Catch para tratamento de erros
+--
+Visão do Postman
+--
+--
+Aulas 54 até 59 (05-08):
+54 => Esclarecimento sobre definições de rotas para evitar duplicatas
+--
+55 => [HttpGet("/primeiro")] => a barra (/) faz com que a definição inserida em Route seja ignorada e se use essa nova definição.
+   => [HttpGet("{id}/{primeiro}")] => passagem de 2 parâmetros.
+   => conseguimos empilhar definições de rotas ([HttpGet]) nos endpoints.
+--
+56 => restrições de rota para ter um valor mínimo = [HttpGet("{id:int:min(1)}", Name = "ObterProduto")] => esse min indica o valor mínimo.
+   => [HttpGet("{valor:alpha:length(5)}")] = alpha para valores alfa numéricos e length para um tamanho mínimo.
+--
+57 => Retornos de métodos: Tipo Específico (como tipos primitivos); IActionResult (para retornos ActionResult); ActionResult<T> (para retorno de um ActionResult com / ou tipo específico de T).
+--
+58 => Métodos Sincronos e Assíncronos = método Get2 da ProdutosController como exemplo.
+--
+59 => Model Binding serve para mapear dados de uma requisição HTTP para os parâmetros de uma de um Controlador.
+   => query strings - valor é enviado na URL = ?nome=Suco&ativo=true
+   => Formulário pelos métodos POST e PUT
+   => BindingRequired = obriga o parâmetro a ser obrigatório.
+   => BindingNever = para não colocar ele como parte dos endpoints
+--
+60 (06-08):
+60 = FromService => Permite injetar as dependências diretamente no método Action do Controlador que requer a dependência.
+--
+61 até 64 (08/08): 
+61 = criação de validações direto no campo - [StringLength(80, ErrorMessage = "O nome deve ter no máximo {1} caracteres!", MinimumLength = 5)]
+--
+62 = criação de validações personalizadas.
+--
+63 = usando uma interface (IValidatableObject na classe Produto) para implementar validações.
+--
+64 = criação de sessões no appsettings.json para incluir dados novos para tratar novos detalhes.
+
+
