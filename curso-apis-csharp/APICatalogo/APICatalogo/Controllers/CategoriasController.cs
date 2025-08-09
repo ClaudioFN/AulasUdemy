@@ -12,12 +12,24 @@ namespace APICatalogo.Controllers
     public class CategoriasController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly IConfiguration _configuration;
         //private readonly IMeuServico _meuServico;
 
-        public CategoriasController(AppDbContext context /*, IMeuServico meuServico*/)
+        public CategoriasController(AppDbContext context /*, IMeuServico meuServico*/, IConfiguration configuration)
         {
             _context = context;
+            _configuration = configuration;
             //_meuServico = meuServico;
+        }
+
+        [HttpGet("LerArquivoConfiguracao")]
+        public string GetValores()
+        {
+            var valor1 = _configuration["chave1"];
+            var valor2 = _configuration["cahve2"];
+            var secao1 = _configuration["secao1:chave2"];
+        
+            return $"Chave1 = {valor1} \nChave2 = {valor2} \nSeção1 => Chave2 = {secao1}";
         }
 
         [HttpGet("produtos")]

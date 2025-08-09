@@ -9,6 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
+var valor1 = builder.Configuration["chave1"];
+var secao1 = builder.Configuration["secao1:chave2"];
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 string mySqlConnection = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -18,13 +21,14 @@ builder.Services.AddDbContext<AppDbContext>(
 
 builder.Services.AddTransient<IMeuServico, MeuServico>();
 
-var app = builder.Build();
+var app = builder.Build(); // a66 - da detalhes disso aqui como middlewares
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseDeveloperExceptionPage();
 }
 
 app.UseHttpsRedirection();

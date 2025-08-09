@@ -31,7 +31,7 @@ Aulas 54 até 59 (05-08):
    => Formulário pelos métodos POST e PUT
    => BindingRequired = obriga o parâmetro a ser obrigatório.
    => BindingNever = para não colocar ele como parte dos endpoints
---
+----
 60 (06-08):
 60 = FromService => Permite injetar as dependências diretamente no método Action do Controlador que requer a dependência.
 --
@@ -43,5 +43,11 @@ Aulas 54 até 59 (05-08):
 63 = usando uma interface (IValidatableObject na classe Produto) para implementar validações.
 --
 64 = criação de sessões no appsettings.json para incluir dados novos para tratar novos detalhes.
+----
+65 até 66 (09-08):
+65 = como ler o arquivo appsettings.json | var valor1 = builder.Configuration["chave1"];
+--
+66 = conceitos sobre middleware
+----
 
 
