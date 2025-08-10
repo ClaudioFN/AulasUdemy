@@ -139,7 +139,7 @@
         }
       }
     },
-    "/Categorias/id:int": {
+    "/Categorias/{id}": {
       "get": {
         "tags": [
           "Categorias"
@@ -148,7 +148,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -177,9 +178,7 @@
             }
           }
         }
-      }
-    },
-    "/Categorias/{id}": {
+      },
       "put": {
         "tags": [
           "Categorias"

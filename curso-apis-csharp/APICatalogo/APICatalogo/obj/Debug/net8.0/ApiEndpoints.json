@@ -37,6 +37,33 @@
   },
   {
     "ContainingType": "APICatalogo.Controllers.CategoriasController",
+    "Method": "Get",
+    "RelativePath": "Categorias/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "APICatalogo.Models.Categoria",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "ObterCategoria"
+  },
+  {
+    "ContainingType": "APICatalogo.Controllers.CategoriasController",
     "Method": "Put",
     "RelativePath": "Categorias/{id}",
     "HttpMethod": "PUT",
@@ -71,33 +98,6 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "APICatalogo.Controllers.CategoriasController",
-    "Method": "Get",
-    "RelativePath": "Categorias/id:int",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "APICatalogo.Models.Categoria",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "ObterCategoria"
   },
   {
     "ContainingType": "APICatalogo.Controllers.CategoriasController",

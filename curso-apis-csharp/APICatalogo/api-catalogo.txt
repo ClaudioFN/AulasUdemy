@@ -49,5 +49,25 @@ Aulas 54 até 59 (05-08):
 --
 66 = conceitos sobre middleware
 ----
+67 até 72(10-08):
+67 => UseExceptionHandler = middleware de tratamento de exceções para pegar exceções não tratadas, voltando com erro 500.
+--
+68 => tratativas de filtros para autorizar, gerar exception, logo e cache de maneira personalizada. Antes ou depois de método Action. Inserido no método Action / controlador / globalmente.
+--
+69 => aplicação dos filtros. Criando registros de log dos métodos Action. BEM UTIL.
+--
+70 => log com diferentes níveis (Critical, Debug, Error, Information, None, Trace, Warning) usando ILogger na classe que se quer logar.
+--
+71 => log customizado que será gerado em um arquivo texto.
+   - criou a pasta Logging
+   - criou as 3 classes CustomerLogger.cs, CustomLoggerProvider.cs, CustomLoggerProviderConfiguration.cs
+   - CustomLoggerProviderConfiguration = LogLevel (nível do log); EventId (id do log)
+   - CustomLoggerProvider = implenta ILoggerProvider para logs personalizados.
+   - CustomerLogger = define os métodos para uso do log implementando a ILogger.
+   - mexer com a classe Program.cs para adiocionar o logger.
+--
+72 => otimização de código usando de exemp. CategoriasController mas serve para o ProdutosController.
+   - Alterando a parte de tratamento de exceções (código catch). Usando IExceptionFilter para capturar exceções durante a execução do controlador.
+   - Removendo o acoplamento do DbContext na classe. Usando o padrão Repository.
 
 

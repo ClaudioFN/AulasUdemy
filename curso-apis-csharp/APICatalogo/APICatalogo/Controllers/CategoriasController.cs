@@ -1,4 +1,5 @@
 ﻿using APICatalogo.Context;
+using APICatalogo.Filters;
 using APICatalogo.Models;
 using APICatalogo.Services;
 using Microsoft.AspNetCore.Http;
@@ -13,12 +14,15 @@ namespace APICatalogo.Controllers
     {
         private readonly AppDbContext _context;
         private readonly IConfiguration _configuration;
+        private readonly ILogger _logger;
         //private readonly IMeuServico _meuServico;
 
-        public CategoriasController(AppDbContext context /*, IMeuServico meuServico*/, IConfiguration configuration)
+        public CategoriasController(AppDbContext context /*, IMeuServico meuServico*/, IConfiguration configuration
+            , ILogger<CategoriasController> logger)
         {
             _context = context;
             _configuration = configuration;
+            _logger = logger;
             //_meuServico = meuServico;
         }
 
@@ -35,10 +39,12 @@ namespace APICatalogo.Controllers
         [HttpGet("produtos")]
         public ActionResult<IEnumerable<Categoria>> GetCategoriasProdutos()
         {
+            _logger.LogInformation(" ======================================GET API CATEGORIAS PRODUTOS======================================");
             return _context.Categorias.Include(p => p.Produtos).Take(10).ToList(); // Take = limitar a quantidade trazida para a aplicacao
         }
 
         [HttpGet]
+        [ServiceFilter(typeof(ApiLoggingFilter))]
         public ActionResult<IEnumerable<Categoria>> Get()
         {
             try
@@ -51,15 +57,20 @@ namespace APICatalogo.Controllers
             }
         }
 
-        [HttpGet("id:int", Name = "ObterCategoria")]
+        [HttpGet("{id:int}", Name = "ObterCategoria")]
         public ActionResult<Categoria> Get(int id)
         {
+            //throw new Exception("Exceção ao retornar detalhes pelo id"); // teste da aula 67
             try
             {
+                _logger.LogInformation($" ======================================GET API CATEGORIAS ID = {id} ======================================");
+
                 var categoria = _context.Categorias.FirstOrDefault(p => p.CategoriaId == id);
 
                 if (categoria == null)
                 {
+                    _logger.LogInformation($" ======================================GET API CATEGORIAS ID = {id} NOT FOUND ======================================");
+
                     return NotFound("Categoria não encontrada!");
                 }
 
