@@ -1,6 +1,7 @@
 ﻿using APICatalogo.Context;
 using APICatalogo.Filters;
 using APICatalogo.Models;
+using APICatalogo.Repositories;
 using APICatalogo.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,15 +13,15 @@ namespace APICatalogo.Controllers
     [ApiController]
     public class CategoriasController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly ICategoriaInterface _repository;
         private readonly IConfiguration _configuration;
         private readonly ILogger _logger;
         //private readonly IMeuServico _meuServico;
 
-        public CategoriasController(AppDbContext context /*, IMeuServico meuServico*/, IConfiguration configuration
+        public CategoriasController(ICategoriaInterface repository /*, IMeuServico meuServico*/, IConfiguration configuration
             , ILogger<CategoriasController> logger)
         {
-            _context = context;
+            _repository = repository;
             _configuration = configuration;
             _logger = logger;
             //_meuServico = meuServico;
@@ -40,21 +41,18 @@ namespace APICatalogo.Controllers
         public ActionResult<IEnumerable<Categoria>> GetCategoriasProdutos()
         {
             _logger.LogInformation(" ======================================GET API CATEGORIAS PRODUTOS======================================");
-            return _context.Categorias.Include(p => p.Produtos).Take(10).ToList(); // Take = limitar a quantidade trazida para a aplicacao
+            //return _context.Categorias.Include(p => p.Produtos).Take(10).ToList(); // Take = limitar a quantidade trazida para a aplicacao
+            return _repository.GetCategorias().ToList();
         }
 
         [HttpGet]
         [ServiceFilter(typeof(ApiLoggingFilter))]
         public ActionResult<IEnumerable<Categoria>> Get()
         {
-            try
-            {
-                return _context.Categorias.AsNoTracking().ToList();// AsNoTracking = impede rastreio do estado dos objetos e armazenamento em cache que sobrecarregue a aplicacao
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Ocorreu um erro ao tratar sua solicitação Get!");
-            }
+            //return _context.Categorias.AsNoTracking().ToList();// AsNoTracking = impede rastreio do estado dos objetos e armazenamento em cache que sobrecarregue a aplicacao
+            var categorias = _repository.GetCategorias();
+
+            return Ok(categorias);
         }
 
         [HttpGet("{id:int}", Name = "ObterCategoria")]
@@ -65,9 +63,11 @@ namespace APICatalogo.Controllers
             {
                 _logger.LogInformation($" ======================================GET API CATEGORIAS ID = {id} ======================================");
 
-                var categoria = _context.Categorias.FirstOrDefault(p => p.CategoriaId == id);
+                //var categoria = _context.Categorias.FirstOrDefault(p => p.CategoriaId == id);
 
-                if (categoria == null)
+                var categoria = _repository.GetCategoria(id);
+
+                if (categoria is null)
                 {
                     _logger.LogInformation($" ======================================GET API CATEGORIAS ID = {id} NOT FOUND ======================================");
 
@@ -88,10 +88,11 @@ namespace APICatalogo.Controllers
             if (categoria is null)
                 return BadRequest();
 
-            _context.Categorias.Add(categoria);
-            _context.SaveChanges();
+            //_context.Categorias.Add(categoria);
+            //_context.SaveChanges();
+            var categoriaCriada = _repository.Create(categoria);
 
-            return new CreatedAtRouteResult("ObterCategoria", new { id = categoria.CategoriaId }, categoria);
+            return new CreatedAtRouteResult("ObterCategoria", new { id = categoriaCriada.CategoriaId }, categoriaCriada);
         }
 
         [HttpPut("{id:int}")]
@@ -101,13 +102,15 @@ namespace APICatalogo.Controllers
             {
                 if (id != categoria.CategoriaId)
                 {
+                    _logger.LogWarning($"Dados Inválidos..");
                     return BadRequest();
                 }
 
-                _context.Entry(categoria).State = EntityState.Modified;
-                _context.SaveChanges();
+                //_context.Entry(categoria).State = EntityState.Modified;
+                //_context.SaveChanges();
+                _repository.Update(categoria);
 
-                return Ok();
+                return Ok(categoria);
             }
             catch (Exception ex)
             {
@@ -120,17 +123,19 @@ namespace APICatalogo.Controllers
         [HttpDelete("{id:int}")]
         public ActionResult Delete(int id)
         {
-            var categoria = _context.Categorias.FirstOrDefault(p => p.CategoriaId == id);
+            //var categoria = _context.Categorias.FirstOrDefault(p => p.CategoriaId == id);
+            var categoria = _repository.GetCategoria(id);
 
             if (categoria is null)
             {
                 return NotFound("Categoria não encontrada para DELETE!");
             }
 
-            _context.Categorias.Remove(categoria);
-            _context.SaveChanges();
+            //_context.Categorias.Remove(categoria);
+            //_context.SaveChanges();
+            var categoriaExcluida = _repository.Delete(id);
 
-            return Ok(categoria);
+            return Ok(categoriaExcluida);
         }
 
         [HttpGet("UsandoFromServices/{nome}")]

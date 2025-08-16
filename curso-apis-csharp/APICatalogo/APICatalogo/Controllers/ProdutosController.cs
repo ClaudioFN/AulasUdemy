@@ -1,5 +1,6 @@
 ﻿using APICatalogo.Context;
 using APICatalogo.Models;
+using APICatalogo.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,11 +11,11 @@ namespace APICatalogo.Controllers
     [ApiController]
     public class ProdutosController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IProdutoRepository _repository;
 
-        public ProdutosController(AppDbContext context)
+        public ProdutosController(IProdutoRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         // /produtos/
@@ -31,13 +32,14 @@ namespace APICatalogo.Controllers
         {
             try
             {
-                var produtos = _context.Produtos.Take(10).AsNoTracking().ToList(); // AsNoTracking = impede rastreio do estado dos objetos e armazenamento em cache que sobrecarregue a aplicacao
+                //var produtos = _context.Produtos.Take(10).AsNoTracking().ToList(); // AsNoTracking = impede rastreio do estado dos objetos e armazenamento em cache que sobrecarregue a aplicacao
                                                                                    // Take = limitar a quantidade trazida para a aplicacao
+                var produtos = _repository.GetProdutos().ToList();
                 if (produtos is null)
                 {
                     return NotFound("Nenhum Produto encontrado!");
                 }
-                return produtos;
+                return Ok(produtos);
             }
             catch (Exception ex)
             {

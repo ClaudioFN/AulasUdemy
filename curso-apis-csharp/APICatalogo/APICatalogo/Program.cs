@@ -2,6 +2,7 @@ using APICatalogo.Context;
 using APICatalogo.Extensions;
 using APICatalogo.Filters;
 using APICatalogo.Logging;
+using APICatalogo.Repositories;
 using APICatalogo.Services;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
@@ -32,6 +33,11 @@ builder.Services.AddDbContext<AppDbContext>(
 
 
 builder.Services.AddScoped<ApiLoggingFilter>();
+
+// 77
+builder.Services.AddScoped<ICategoriaInterface, CategoriaRepository>();
+// 80
+builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 
 // aula 71
 builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderConfiguration

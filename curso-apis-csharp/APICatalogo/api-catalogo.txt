@@ -69,5 +69,25 @@ Aulas 54 até 59 (05-08):
 72 => otimização de código usando de exemp. CategoriasController mas serve para o ProdutosController.
    - Alterando a parte de tratamento de exceções (código catch). Usando IExceptionFilter para capturar exceções durante a execução do controlador.
    - Removendo o acoplamento do DbContext na classe. Usando o padrão Repository.
-
+---- 
+73 até 75 (11/08):
+73 = explicação do que vem nos próximos vídeos.
+--
+74 = Definição de Repository
+--
+75 = Iniciando a criação do repository (apenas apresentando os futuros códigos)
+----
+76 até 79 (12/08):
+76 = Criando pasta para repositories (Repositories); criando interface para categorias (ICategoriaRepository); criando classe que implementa a interface (CategoriaRepository).
+--
+77 = Ajustando a classe do controller Categoria (CategoriaController).
+--
+78 = Efetuando os testes pós alterações.
+--
+79 = Explicação do que os códigos a serem implementados irão fazer (dessa vez usando IQueryble).
+----
+80 (14/08):
+80 = Criação das classes IProdutoRepository (interface) e ProdutoRepository (classe concreta)
+----
+81 
 
