@@ -54,14 +54,14 @@ namespace APICatalogo.Controllers
         {
             try
             {
-                var produto = _context.Produtos.Take(10).FirstOrDefault(p => p.ProdutoId == id);
+                var produto = _repository.GetProduto(id);
 
                 if (produto is null)
                 {
                     return NotFound("O Produto especificado não foi encontrado!");
                 }
 
-                return produto;
+                return Ok(produto);
             }
             catch (Exception ex)
             {
@@ -77,10 +77,9 @@ namespace APICatalogo.Controllers
             if (produto is null)
                 return BadRequest();
 
-            _context.Produtos.Add(produto);
-            _context.SaveChanges();
+            var novoProduto = _repository.Create(produto);
 
-            return new CreatedAtRouteResult("ObterProduto", new { id = produto.ProdutoId }, produto);
+            return new CreatedAtRouteResult("ObterProduto", new { id = produto.ProdutoId }, novoProduto);
         }
 
         // /produtos/{id}
@@ -94,10 +93,18 @@ namespace APICatalogo.Controllers
                     return BadRequest();
                 }
 
-                _context.Entry(produto).State = EntityState.Modified;
-                _context.SaveChanges();
+                //_context.Entry(produto).State = EntityState.Modified;
+                //_context.SaveChanges();
+                bool atualizado = _repository.Update(produto);
 
-                return Ok();
+                if(atualizado)
+                {
+                    return Ok(produto);
+                } else
+                {
+                    return StatusCode(500, $"Falha ao atualizar o produto de ID = {id}");
+                }
+                    
             }
             catch (Exception ex) 
             {
@@ -113,7 +120,7 @@ namespace APICatalogo.Controllers
         {
             try
             {
-                var produto = _context.Produtos.FirstOrDefault(p => p.ProdutoId == id);
+                /*var produto = _context.Produtos.FirstOrDefault(p => p.ProdutoId == id);
 
                 if (produto is null)
                 {
@@ -123,7 +130,18 @@ namespace APICatalogo.Controllers
                 _context.Produtos.Remove(produto);
                 _context.SaveChanges();
 
-                return Ok(produto);
+                return Ok(produto);*/
+
+                bool deletado = _repository.Delete(id);
+
+                if (deletado)
+                {
+                    return Ok($"Produto de ID = {id} foi excluído!");
+                }
+                else
+                {
+                    return StatusCode(500, $"Falha ao excluir o produto de ID = {id}");
+                }
             }
             catch (Exception ex)
             {

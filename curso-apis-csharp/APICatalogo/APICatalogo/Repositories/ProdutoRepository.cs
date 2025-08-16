@@ -3,16 +3,21 @@ using APICatalogo.Models;
 
 namespace APICatalogo.Repositories;
 
-public class ProdutoRepository : IProdutoRepository
+public class ProdutoRepository : Repository<Produto>, IProdutoRepository
 {
-    private readonly AppDbContext _context;
+    // private readonly AppDbContext _context;
 
-    public ProdutoRepository(AppDbContext context)
+    public ProdutoRepository(AppDbContext context) : base(context)
     {
-        _context = context;
+
     }
 
-    public IQueryable<Produto> GetProdutos()
+    public IEnumerable<Produto> GetProdutosPorCategoria(int id)
+    {
+        return GetAllE().Where(c => c.ProdutoId == id);
+    }
+
+    /*public IQueryable<Produto> GetProdutos()
     {
         return _context.Produtos;
     }
@@ -75,5 +80,5 @@ public class ProdutoRepository : IProdutoRepository
         }
 
         return false;
-    }
+    }*/
 }

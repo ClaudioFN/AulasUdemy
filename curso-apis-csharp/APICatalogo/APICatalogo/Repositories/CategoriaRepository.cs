@@ -4,16 +4,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace APICatalogo.Repositories;
 
-public class CategoriaRepository : ICategoriaInterface
+public class CategoriaRepository : Repository<Categoria>, ICategoriaInterface
 {
-    private readonly AppDbContext _context;
+    // private readonly AppDbContext _context;
 
-    public CategoriaRepository(AppDbContext context)
+    public CategoriaRepository(AppDbContext context): base(context)
     {
-        _context = context;
+
     }
 
-    public IEnumerable<Categoria> GetCategorias()
+    /*public IEnumerable<Categoria> GetCategorias()
     {
         return _context.Categorias.ToList();
     }
@@ -63,7 +63,7 @@ public class CategoriaRepository : ICategoriaInterface
         return categoria;
 
     }
-
+    */
 
 
 

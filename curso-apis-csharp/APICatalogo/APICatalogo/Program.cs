@@ -38,6 +38,8 @@ builder.Services.AddScoped<ApiLoggingFilter>();
 builder.Services.AddScoped<ICategoriaInterface, CategoriaRepository>();
 // 80
 builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
+// 86
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 // aula 71
 builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderConfiguration
