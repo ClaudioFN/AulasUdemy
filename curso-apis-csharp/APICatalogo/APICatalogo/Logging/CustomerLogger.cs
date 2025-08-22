@@ -37,7 +37,7 @@ public class CustomerLogger : ILogger
                 streamWriter.WriteLine(mensagem);
                 streamWriter.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }

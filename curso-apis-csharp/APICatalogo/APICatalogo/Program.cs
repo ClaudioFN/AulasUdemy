@@ -40,6 +40,8 @@ builder.Services.AddScoped<ICategoriaInterface, CategoriaRepository>();
 builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 // 86
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+// 92
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // aula 71
 builder.Logging.AddProvider(new CustomLoggerProvider(new CustomLoggerProviderConfiguration

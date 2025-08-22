@@ -11,11 +11,28 @@ namespace APICatalogo.Controllers
     [ApiController]
     public class ProdutosController : ControllerBase
     {
-        private readonly IProdutoRepository _repository;
-
-        public ProdutosController(IProdutoRepository repository)
+        //private readonly IProdutoRepository _produtoRepository;
+        //private readonly IRepository<Produto> _repository;
+        private readonly IUnitOfWork _unitOfWork;
+        public ProdutosController(/*IProdutoRepository produtoRepository, IRepository<Produto> repository,*/ IUnitOfWork unitOfWork)
         {
-            _repository = repository;
+            //_produtoRepository = produtoRepository;
+            //_repository = repository;
+            _unitOfWork = unitOfWork;
+        }
+
+        [HttpGet("produtos/{id}")]
+        public ActionResult <IEnumerable<Produto>> GetProdutosCategoria(int id)
+        {
+            //var produtos = _produtoRepository.GetProdutosPorCategoria(id);
+            var produtos = _unitOfWork.ProdutoRepository.GetProdutosPorCategoria(id);
+
+            if(produtos is null)
+            {
+                return NotFound();
+            }
+
+            return Ok(produtos);
         }
 
         // /produtos/
@@ -34,7 +51,8 @@ namespace APICatalogo.Controllers
             {
                 //var produtos = _context.Produtos.Take(10).AsNoTracking().ToList(); // AsNoTracking = impede rastreio do estado dos objetos e armazenamento em cache que sobrecarregue a aplicacao
                                                                                    // Take = limitar a quantidade trazida para a aplicacao
-                var produtos = _repository.GetProdutos().ToList();
+                //var produtos = _repository.GetAllE();
+                var produtos = _unitOfWork.ProdutoRepository.GetAllE();
                 if (produtos is null)
                 {
                     return NotFound("Nenhum Produto encontrado!");
@@ -54,7 +72,8 @@ namespace APICatalogo.Controllers
         {
             try
             {
-                var produto = _repository.GetProduto(id);
+                //var produto = _repository.Get(c => c.ProdutoId == id);
+                var produto = _unitOfWork.ProdutoRepository.Get(c => c.ProdutoId == id);
 
                 if (produto is null)
                 {
@@ -77,7 +96,9 @@ namespace APICatalogo.Controllers
             if (produto is null)
                 return BadRequest();
 
-            var novoProduto = _repository.Create(produto);
+            //var novoProduto = _repository.Create(produto);
+            var novoProduto = _unitOfWork.ProdutoRepository.Create(produto);
+            _unitOfWork.Commit();
 
             return new CreatedAtRouteResult("ObterProduto", new { id = produto.ProdutoId }, novoProduto);
         }
@@ -95,11 +116,14 @@ namespace APICatalogo.Controllers
 
                 //_context.Entry(produto).State = EntityState.Modified;
                 //_context.SaveChanges();
-                bool atualizado = _repository.Update(produto);
+                //bool atualizado = _repository.Update(produto);
+                //var produtoAtualizado = _repository.Update(produto);
+                var produtoAtualizado = _unitOfWork.ProdutoRepository.Update(produto);
+                _unitOfWork.Commit();
 
-                if(atualizado)
+                if(produtoAtualizado is not null)
                 {
-                    return Ok(produto);
+                    return Ok(produtoAtualizado);
                 } else
                 {
                     return StatusCode(500, $"Falha ao atualizar o produto de ID = {id}");
@@ -132,16 +156,26 @@ namespace APICatalogo.Controllers
 
                 return Ok(produto);*/
 
-                bool deletado = _repository.Delete(id);
+                //bool deletado = _repository.Delete(id);
+                //var produto = _repository.Get(c => c.ProdutoId == id);
+                var produto = _unitOfWork.ProdutoRepository.Get(c => c.ProdutoId == id);
 
-                if (deletado)
+                if (produto is null)
+                    return StatusCode(500, $"Falha ao excluir o produto de ID = {id}");
+
+                //var deletado = _repository.Delete(produto);
+                var deletado = _unitOfWork.ProdutoRepository.Delete(produto);
+                _unitOfWork.Commit();
+
+                return Ok($"Produto de ID = {id} foi excluído!");
+                /*if (deletado)
                 {
                     return Ok($"Produto de ID = {id} foi excluído!");
                 }
                 else
                 {
                     return StatusCode(500, $"Falha ao excluir o produto de ID = {id}");
-                }
+                }*/
             }
             catch (Exception ex)
             {

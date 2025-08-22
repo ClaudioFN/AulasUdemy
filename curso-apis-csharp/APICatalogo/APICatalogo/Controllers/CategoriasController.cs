@@ -13,17 +13,19 @@ namespace APICatalogo.Controllers
     [ApiController]
     public class CategoriasController : ControllerBase
     {
-        private readonly ICategoriaInterface _repository;
+        //private readonly ICategoriaInterface _repository;
+        // private readonly IRepository<Categoria> _repository;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IConfiguration _configuration;
         private readonly ILogger _logger;
         //private readonly IMeuServico _meuServico;
 
-        public CategoriasController(ICategoriaInterface repository /*, IMeuServico meuServico*/, IConfiguration configuration
-            , ILogger<CategoriasController> logger)
+        public CategoriasController(/*ICategoriaInterface repository , IMeuServico meuServico,*/ IConfiguration configuration
+            , ILogger<CategoriasController> logger, IUnitOfWork unitOfWork)
         {
-            _repository = repository;
             _configuration = configuration;
             _logger = logger;
+            _unitOfWork = unitOfWork;
             //_meuServico = meuServico;
         }
 
@@ -42,7 +44,8 @@ namespace APICatalogo.Controllers
         {
             _logger.LogInformation(" ======================================GET API CATEGORIAS PRODUTOS======================================");
             //return _context.Categorias.Include(p => p.Produtos).Take(10).ToList(); // Take = limitar a quantidade trazida para a aplicacao
-            return _repository.GetCategorias().ToList();
+            //return _repository.GetAllE().ToList();
+            return _unitOfWork.CategoriaRepository.GetAllE().ToList();
         }
 
         [HttpGet]
@@ -50,7 +53,8 @@ namespace APICatalogo.Controllers
         public ActionResult<IEnumerable<Categoria>> Get()
         {
             //return _context.Categorias.AsNoTracking().ToList();// AsNoTracking = impede rastreio do estado dos objetos e armazenamento em cache que sobrecarregue a aplicacao
-            var categorias = _repository.GetCategorias();
+            //var categorias = _repository.GetAllE();
+            var categorias = _unitOfWork.CategoriaRepository.GetAllE();
 
             return Ok(categorias);
         }
@@ -65,7 +69,8 @@ namespace APICatalogo.Controllers
 
                 //var categoria = _context.Categorias.FirstOrDefault(p => p.CategoriaId == id);
 
-                var categoria = _repository.GetCategoria(id);
+                //var categoria = _repository.Get(c => c.CategoriaId == id);
+                var categoria = _unitOfWork.CategoriaRepository.Get(c => c.CategoriaId == id);
 
                 if (categoria is null)
                 {
@@ -78,7 +83,7 @@ namespace APICatalogo.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"Ocorreu um erro ao tratar sua solicitação Get Especifico = {id}!");
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Ocorreu um erro ao tratar sua solicitação Get Especifico = {id} - {ex.Message}!");
             }
         }
 
@@ -90,7 +95,9 @@ namespace APICatalogo.Controllers
 
             //_context.Categorias.Add(categoria);
             //_context.SaveChanges();
-            var categoriaCriada = _repository.Create(categoria);
+            //var categoriaCriada = _repository.Create(categoria);
+            var categoriaCriada = _unitOfWork.CategoriaRepository.Create(categoria);
+            _unitOfWork.Commit();
 
             return new CreatedAtRouteResult("ObterCategoria", new { id = categoriaCriada.CategoriaId }, categoriaCriada);
         }
@@ -108,13 +115,15 @@ namespace APICatalogo.Controllers
 
                 //_context.Entry(categoria).State = EntityState.Modified;
                 //_context.SaveChanges();
-                _repository.Update(categoria);
+                //_repository.Update(categoria);
+                _unitOfWork.CategoriaRepository.Update(categoria);
+                _unitOfWork.Commit();
 
                 return Ok(categoria);
             }
             catch (Exception ex)
             {
-               return StatusCode(StatusCodes.Status500InternalServerError, $"Ocorreu um erro ao tratar sua solicitação Put Especifico = {id}!");
+               return StatusCode(StatusCodes.Status500InternalServerError, $"Ocorreu um erro ao tratar sua solicitação Put Especifico = {id} - {ex.Message}!");
             }
 
 
@@ -124,7 +133,8 @@ namespace APICatalogo.Controllers
         public ActionResult Delete(int id)
         {
             //var categoria = _context.Categorias.FirstOrDefault(p => p.CategoriaId == id);
-            var categoria = _repository.GetCategoria(id);
+            //var categoria = _repository.Get(c => c.CategoriaId == id);
+            var categoria = _unitOfWork.CategoriaRepository.Get(c => c.CategoriaId == id);
 
             if (categoria is null)
             {
@@ -133,7 +143,8 @@ namespace APICatalogo.Controllers
 
             //_context.Categorias.Remove(categoria);
             //_context.SaveChanges();
-            var categoriaExcluida = _repository.Delete(id);
+            var categoriaExcluida = _unitOfWork.CategoriaRepository.Delete(categoria);
+            _unitOfWork.Commit();
 
             return Ok(categoriaExcluida);
         }

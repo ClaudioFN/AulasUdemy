@@ -101,4 +101,25 @@ Aulas 54 até 59 (05-08):
 85 = Criando a classe genérica (Repository) que herda da interface genérica (IRepository) e implementa os métodos especificados
 --
 86 = Alterando controllers para uso dos itens genéricos
-
+----
+==============================================================PENDENTE DE COMMIT PARA DIA 23 A PARTIR DAQUI
+87 ate 91 (18/08):
+87 = Alterando as classes de Controller (Produto e Categoria).
+--
+88 = Testando as alterações no Swagger.
+--
+89 = Apresentação do padrão Unit of Work.
+   => Os repositórios são responsáveis por realizar operações de leitura e escrita no BD, mas não executam o SaveChanges. Unit of Work é quem gerencia as transações e chama o SaveChanges. Unit of Work inicia, confirma e reverte as alterações. Tudo passa por ele.
+--
+90 = Implementação do padrão Unit of Work (interface IUnitOfWork.cs)
+--
+91 = Completando a implementação do Unit Of Work (classe concreta UnitOfWork.cs)
+----
+92 ate 94 (20/08):
+92 = Implementando as trocas do Repository
+--
+93 = Ajustando os Controllers
+--
+94 = Testes dos endpoints
+----
+ 
