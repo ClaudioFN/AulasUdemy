@@ -102,7 +102,7 @@ Aulas 54 até 59 (05-08):
 --
 86 = Alterando controllers para uso dos itens genéricos
 ----
-==============================================================PENDENTE DE COMMIT PARA DIA 23 A PARTIR DAQUI
+==============================================================PENDENTE DE COMMIT PARA DIA 23 A PARTIR DAQUI = feito em 22/08
 87 ate 91 (18/08):
 87 = Alterando as classes de Controller (Produto e Categoria).
 --
@@ -122,4 +122,19 @@ Aulas 54 até 59 (05-08):
 --
 94 = Testes dos endpoints
 ----
- 
+==============================================================PENDENTE DE COMMIT PARA DIA 30 A PARTIR DAQUI
+95 ate 100 (22/08): 
+--
+95 = Apresentação do fluxo de aulas.
+--
+96 = Apresentação do Data Transfer Object - DTO => Contêiner de dados usado para transportar dados entre diferentes partes / camadas de uma aplicação que define como os dados serão enviados pela rede. É parecido com ViewModel (que representa dados na camada de apresentação). Usa Mapper.
+--
+97 = Implementando na CategoriaController o DTO.
+--
+98 = Mapping de CategoriaDTO
+--
+99 = Realizando os ajustes para a CategoriaController.
+--
+100 = Apresentando o AutoMapper => Mapeamento entre objetos que representam as entidades e os objetos que representam os DTOs filtrando as propriedades que desejamos expor.
+--
+101 = 
