@@ -6,7 +6,10 @@ C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bi
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\APICatalogo.runtimeconfig.json
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\APICatalogo.dll
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\APICatalogo.pdb
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Humanizer.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -104,11 +107,14 @@ C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\ob
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\obj\Debug\net8.0\APICatal.C7776A93.Up2Date
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\obj\Debug\net8.0\APICatalogo.dll
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\obj\Debug\net8.0\refint\APICatalogo.dll
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\obj\Debug\net8.0\APICatalogo.pdb
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\obj\Debug\net8.0\APICatalogo.genruntimeconfig.cache
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\obj\Debug\net8.0\ref\APICatalogo.dll
-C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
-C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
