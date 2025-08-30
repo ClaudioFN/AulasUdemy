@@ -153,3 +153,30 @@ Aulas 54 até 59 (05-08):
 106 = Texto para ajustar uma lógica na validação presente na classe Controller do Produto, no método Patch.
 -----
 ==============================================================PENDENTE DE COMMIT PARA DIA 30 A PARTIR DAQUI
+107 ate 109 (25/08):
+--
+107 = Apresentação de primeiro conjunto de ferramentas alternativas ao AutoMapper e aplicação de uma delas.
+--
+108 = Continuação e aplicação de outra ferramenta alternativa.
+--
+109 = Introdução a Paginação de grandes quantidade de dados e interação de código (sem usar o projeto Catalogo).
+---
+110 ate 111 (26/08):
+--
+110 = Paginação simples com criação da classe PaginacaoParameters.cs (para os parâmetros) e adaptação em Produto (IProdutoRepository e ProdutoRepository) e alteração da classe controller.
+--
+111 = Explicação da próxima melhoria de paginação.
+----
+112 ate 115 (27/08):
+--
+112 = Implementando a paginação aprimorada criando nova classe PageList, alterando o IProdutoRepository e ProdutoRepository e ajustando o Controller do Produto.
+--
+113 = Roteirizando a paginação no Categoria.
+--
+114 = Implementando a paginação na categoria.
+--
+115 = Filtro de dados (conceitualização / roteiro).
+----
+116 ate 117(28/08):
+
+
