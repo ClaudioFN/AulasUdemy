@@ -12,5 +12,5 @@ public interface IUnitOfWork
     // ou 
     //IRepository<Categoria> CategoriaRepository { get; } - menos maleavel
 
-    void Commit();
+    Task CommitAsync();
 }

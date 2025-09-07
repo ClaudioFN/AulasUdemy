@@ -118,3 +118,6 @@ C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bi
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\JetBrains.Annotations.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\X.PagedList.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll

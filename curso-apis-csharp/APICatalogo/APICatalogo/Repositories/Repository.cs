@@ -13,9 +13,19 @@ public class Repository<T>: IRepository<T> where T : class // Forcando a T ser u
         _context = context;
     }
 
-    public IEnumerable<T> GetAllE()
+    public async Task<IEnumerable<T>> GetAllEAsync()
     {
-        return _context.Set<T>().AsNoTracking().ToList();
+        return await _context.Set<T>().AsNoTracking().ToListAsync();
+    }
+
+    public async Task<IEnumerable<T>> GetAllAsync()
+    {
+        return await _context.Set<T>().AsNoTracking().ToListAsync();
+    }
+
+    public async Task<T?> GetAsync(Expression<Func<T, bool>> predicate)
+    {
+        return await _context.Set<T>().FirstOrDefaultAsync(predicate);
     }
 
     public T? Get(Expression<Func<T, bool>> predicate)

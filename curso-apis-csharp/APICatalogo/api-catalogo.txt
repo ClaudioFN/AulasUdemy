@@ -177,6 +177,33 @@ Aulas 54 até 59 (05-08):
 --
 115 = Filtro de dados (conceitualização / roteiro).
 ----
-116 ate 117(28/08):
-
-
+116(03/09):
+--
+116 = Implementando a paginação e filtro por preço para Produtos
+----
+117 e 118(04/09):
+--
+117 = Implementando o Pagination na Categoria, criando a classe nova CategoriasFiltroNome.cs, alterando ICategoriaInterface.cs para ter novo método, a CategoriaRepository.cs para ter o novo método e o CategoriasController.cs para ter o novo endpoint.
+--
+118 = Explicação sobre programação assíncrona.
+----
+119 (05/09):
+--
+119 = Mostrando a programação assíncrona
+----
+120 ate 125(06/09):
+--
+120 = Migração de código para assíncrono
+--
+121 = Migração de código para assíncrono
+--
+122 = Migração de código para assíncrono
+--
+123 = Mexendo na Paginação usando biblioteca externa (X.PagedList.Mvc.Core)
+--
+124 = Completando a implementação assíncrona com IPagedList.
+--
+125 = Apresentando o que é o Autenticação e Autorização para a API.
+----
+126 ate(06/09):
+--

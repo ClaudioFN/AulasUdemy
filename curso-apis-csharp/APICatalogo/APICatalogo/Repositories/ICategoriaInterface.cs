@@ -1,5 +1,6 @@
 ﻿using APICatalogo.Models;
 using APICatalogo.Pagination;
+using X.PagedList;
 
 namespace APICatalogo.Repositories;
 
@@ -15,5 +16,7 @@ public interface ICategoriaInterface : IRepository<Categoria>
 
     Categoria Delete(int id);*/
 
-    PagedList<Categoria> GetCategorias(CategoriaParameters categoriaParams);
+    Task<IPagedList<Categoria>> GetCategoriasAsync(CategoriaParameters categoriaParams);
+
+    Task<IPagedList<Categoria>> GetCategoriasFiltroNomeAsync(CategoriasFiltroNome categoriasParams);
 }
