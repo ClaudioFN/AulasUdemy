@@ -121,3 +121,11 @@ C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bi
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\JetBrains.Annotations.dll
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\X.PagedList.dll
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

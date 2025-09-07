@@ -25,6 +25,10 @@ builder.Services.AddControllers(options =>
 var valor1 = builder.Configuration["chave1"];
 var secao1 = builder.Configuration["secao1:chave2"];
 
+// Aula 127
+builder.Services.AddAuthorization();
+builder.Services.AddAuthentication("Bearer").AddJwtBearer();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 string mySqlConnection = builder.Configuration.GetConnectionString("DefaultConnection");

@@ -207,3 +207,11 @@ Aulas 54 até 59 (05-08):
 ----
 126 ate(06/09):
 --
+126 = Introdutório ao assunto de JWT 
+----
+127 ate(07/09):
+--
+127 = Implementando parte do assunto de configuração de código para autenticação. Tem outros comandos na aula.
+    = prompt de comando: cd <PASTA DO PROJETO ATE CHEGAR NA RAIZ DELE COM O SLN NA PASTA>
+    = comando: dotnet user-jwts create
+    = copiar Token gerado para usar o Bearer via Postman
