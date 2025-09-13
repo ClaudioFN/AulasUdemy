@@ -205,7 +205,7 @@ Aulas 54 até 59 (05-08):
 --
 125 = Apresentando o que é o Autenticação e Autorização para a API.
 ----
-126 ate(06/09):
+126 ate 128(06/09):
 --
 126 = Introdutório ao assunto de JWT 
 ----
@@ -215,3 +215,58 @@ Aulas 54 até 59 (05-08):
     = prompt de comando: cd <PASTA DO PROJETO ATE CHEGAR NA RAIZ DELE COM O SLN NA PASTA>
     = comando: dotnet user-jwts create
     = copiar Token gerado para usar o Bearer via Postman
+--
+128 = Explicação da migração a apresentação de comandos a serem usados.
+----
+==============================================================PENDENTE DE COMMIT PARA DIA 12 A PARTIR DAQUI
+129 (08/09):
+--
+129 = Alterando a classe AppDbContext.cs para uso do IdentityDbContext e incluindo na classe Program.cs
+    = abrir o CMD 
+    = dotnet ef - comando para confirmar que tem o pacote instalado
+    = dotnet tool install --global dotnet-ef - instalar o pacote de migrations
+    = dotnet ef migrations add CriaTabelasIdentity --verbose - cria a migration (so funciona na pasta dentro da SLN)
+    = dotnet ef database update --verbose - implementa as modificações no bd
+----
+130 ate 131 (09/09):
+--
+130 = Alterações no fluxo da classe program.cs, do appsettings.json e no resultados
+--
+131 = Alteração de criação de nova classe ApplicationUser.cs, alteração da AppDbContext para apontar para a nova classe e ajuste pontual de Program.cs de Identity para o ApplicationUser.
+    = dotnet ef migrations add AjusteApplicationUser - cria migração para os novos itens
+    = dotnet ef database update
+----
+132 (10/09):
+--
+132 = Criação das classes para serem usados na aplicação: Response.cs, RegisterModel.cs,LoginModel.s e TokenModel.cs
+--
+133 = Explicações para os próximos passos.
+----
+134 ate (12/09):
+--
+134 = Implementando nova Interface ITokenservice e nova classe TokenService (apenas primeiro método).
+--
+135 = Implementando o método GenerateRefreshToken da classe TokenService.cs.
+--
+136 = Implementando o método GetPrincipalFromExpiredToken da classe Tokenservice.cs.
+--
+137 = Criar o controller AuthController e definir os endpoints de login, register, refreshToken e revoke.
+--
+138 = Criação dos endpoints (aqui apenas o primeiro endpoint de Login).
+----
+139 ate (13/09):
+--
+139 = Implementação do endpoint Register.
+--
+140 = Implementando o endpoint RefreshToken.
+--
+141 = Implementando o endpoint Revoke.
+--
+142 = Começo de testes do JWT implementado como nova inclusão na classe Program.cs.
+--
+143 = Usando a palavra Bearer antes do token, incluir o token gerado no login e assim conseguir acessar os endpoints protegidos
+--
+144 = Explições sobre Role.
+--
+145 = Implementação do endpoint para Role.
+----

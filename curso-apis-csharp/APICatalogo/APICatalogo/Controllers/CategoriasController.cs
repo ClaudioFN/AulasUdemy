@@ -89,9 +89,9 @@ namespace APICatalogo.Controllers
             return _unitOfWork.CategoriaRepository.GetAllAsync().ToList();
         }*/
 
-        [HttpGet]
-        [ServiceFilter(typeof(ApiLoggingFilter))]
         [Authorize]
+        [HttpGet]
+        //[ServiceFilter(typeof(ApiLoggingFilter))]
         public async Task<ActionResult<IEnumerable<CategoriaDTO>>> Get()
         {
             //return _context.Categorias.AsNoTracking().ToList();// AsNoTracking = impede rastreio do estado dos objetos e armazenamento em cache que sobrecarregue a aplicacao
