@@ -28,6 +28,18 @@ builder.Services.AddControllers(options =>
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
 }).AddNewtonsoftJson();
 
+// 153
+//var OrigensComAcessoPermitido = "_origensComAcessoPermitido";
+//builder.Services.AddCors(options => options.AddPolicy(name: OrigensComAcessoPermitido, policy => {
+//    policy.WithOrigins("http://www.apirequest.io");
+//    }
+//    ));
+// 154
+
+builder.Services.AddCors(options => options.AddDefaultPolicy( policy => {
+    policy.WithOrigins("http://www.apirequest.io", "https://www.meu_site.com.br").WithMethods("GET", "POST").AllowAnyHeader().AllowCredentials();
+}    ));
+
 // 128
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 
@@ -90,6 +102,19 @@ builder.Services.AddSwaggerGen(c =>
                     }
                 });
 });
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+
+    options.AddPolicy("SuperAdminOnly", policy => policy.RequireRole("Admin").RequireClaim("id", "Claudio"));
+
+    options.AddPolicy("UserOnly", policy => policy.RequireRole("User"));
+
+    options.AddPolicy("ExclusivePolicyAdminOnly", policy => policy.RequireAssertion(context => context.User.HasClaim(
+        claim => claim.Type == "id" && claim.Value == "Claudio") || context.User.IsInRole("SuperAdmin")));
+});
+
 string mySqlConnection = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDbContext>(
     options => options.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection))
@@ -134,6 +159,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+// 153
+app.UseRouting();
+app.UseCors();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();

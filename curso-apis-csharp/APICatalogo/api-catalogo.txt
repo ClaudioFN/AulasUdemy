@@ -218,7 +218,7 @@ Aulas 54 até 59 (05-08):
 --
 128 = Explicação da migração a apresentação de comandos a serem usados.
 ----
-==============================================================PENDENTE DE COMMIT PARA DIA 12 A PARTIR DAQUI
+==============================================================PENDENTE DE COMMIT PARA DIA 12 A PARTIR DAQUI = FEITO
 129 (08/09):
 --
 129 = Alterando a classe AppDbContext.cs para uso do IdentityDbContext e incluindo na classe Program.cs
@@ -266,7 +266,41 @@ Aulas 54 até 59 (05-08):
 --
 143 = Usando a palavra Bearer antes do token, incluir o token gerado no login e assim conseguir acessar os endpoints protegidos
 --
-144 = Explições sobre Role.
+144 = Explicações sobre Role.
 --
 145 = Implementação do endpoint para Role.
+==============================================================PENDENTE DE COMMIT PARA DIA 19 A PARTIR DAQUI
 ----
+146 ate 148 (15/09):
+--
+146 = Explicação e projeto alterado na AuthController.cs para novo endpoint de adicionar Role.
+--
+147 = Implementação na parte de roles para a classe Programa.cs e o ajuste na classe AuthController.cs
+--
+148 = Novas aplicações de roles em classes alteradas.
+-----
+149 ate 158(19/09):
+--
+149 = 
+--
+150 = 
+--
+151 = 
+--
+152 = 
+--
+153 = CORS implementado para um site específico após ajuste na classe Program.cs.
+--
+154 = Explicações de opções CORS para permitir uso por outras origens.
+--
+155 = Habilitando outras formas de uso do CORS por endpoint alterando a classe Program.cs e o controller CategoriasController.cs. 
+--
+156 = Testes das alterações da aula 155. 
+--
+157 = Limitação de taxa (RateLimiting) para evitar sobrecargas, evitar DDO e reduzir custo por uso de recursos.
+--
+158 = Algoritmos de Rate Limiting.
+----
+159 ate (20/09):
+159 = 
+

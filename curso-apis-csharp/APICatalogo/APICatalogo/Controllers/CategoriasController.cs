@@ -7,6 +7,7 @@ using APICatalogo.Pagination;
 using APICatalogo.Repositories;
 using APICatalogo.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +16,7 @@ using X.PagedList;
 
 namespace APICatalogo.Controllers
 {
+    // [EnableCors("OrigensComAcessoPermitido")] // aula 155
     [Route("[controller]")]
     [ApiController]
     public class CategoriasController : ControllerBase
@@ -89,6 +91,7 @@ namespace APICatalogo.Controllers
             return _unitOfWork.CategoriaRepository.GetAllAsync().ToList();
         }*/
 
+        // [DisableCors] // aulda 155
         [Authorize]
         [HttpGet]
         //[ServiceFilter(typeof(ApiLoggingFilter))]
@@ -228,6 +231,8 @@ namespace APICatalogo.Controllers
 
         }
 
+        //[HttpDelete("id:int")]
+        [Authorize(Policy = "AdminOnly")]
         [HttpDelete("{id:int}")]
         public async Task<ActionResult<CategoriaDTO>> Delete(int id)
         {
