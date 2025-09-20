@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\apicatalogo\\apicatalogo\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\apicatalogo\\apicatalogo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\apicatalogo\\apicatalogo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\apicatalogo\\apicatalogo\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\apicatalogo\\apicatalogo\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\apicatalogo\\apicatalogo\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\apicatalogo\\apicatalogo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "CategoriasController.cs",
               "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\APICatalogo\\Controllers\\CategoriasController.cs",
               "RelativeDocumentMoniker": "APICatalogo\\Controllers\\CategoriasController.cs",
               "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\APICatalogo\\Controllers\\CategoriasController.cs",
               "RelativeToolTip": "APICatalogo\\Controllers\\CategoriasController.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAAAF0AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABYAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-20T23:45:56.894Z",
               "IsPinned": true,
@@ -48,7 +48,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ProdutosController.cs",
               "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\APICatalogo\\Controllers\\ProdutosController.cs",
               "RelativeDocumentMoniker": "APICatalogo\\Controllers\\ProdutosController.cs",
@@ -61,13 +61,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\APICatalogo\\Program.cs",
               "RelativeDocumentMoniker": "APICatalogo\\Program.cs",
               "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\APICatalogo\\Program.cs",
               "RelativeToolTip": "APICatalogo\\Program.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAAAC0AAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAAAIoAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-20T23:43:49.508Z",
               "IsPinned": true,
@@ -75,20 +75,21 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\APICatalogo\\appsettings.json",
               "RelativeDocumentMoniker": "APICatalogo\\appsettings.json",
               "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\APICatalogo\\appsettings.json",
               "RelativeToolTip": "APICatalogo\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvxYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-09-09T22:47:37.549Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\APICatalogo\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "APICatalogo\\Controllers\\AuthController.cs",
@@ -97,8 +98,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-12T23:05:32.872Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",

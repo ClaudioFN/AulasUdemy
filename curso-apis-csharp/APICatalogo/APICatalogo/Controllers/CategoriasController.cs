@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using X.PagedList;
@@ -19,6 +20,7 @@ namespace APICatalogo.Controllers
     // [EnableCors("OrigensComAcessoPermitido")] // aula 155
     [Route("[controller]")]
     [ApiController]
+    // [EnableRateLimiting("fixedwindow")] // comentado na aula 161
     public class CategoriasController : ControllerBase
     {
         //private readonly ICategoriaInterface _repository;
@@ -91,7 +93,8 @@ namespace APICatalogo.Controllers
             return _unitOfWork.CategoriaRepository.GetAllAsync().ToList();
         }*/
 
-        // [DisableCors] // aulda 155
+        // [DisableCors] // 155
+        // [DisableRateLimiting] // 159
         [Authorize]
         [HttpGet]
         //[ServiceFilter(typeof(ApiLoggingFilter))]

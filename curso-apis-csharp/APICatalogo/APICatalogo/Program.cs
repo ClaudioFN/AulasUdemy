@@ -4,15 +4,18 @@ using APICatalogo.Extensions;
 using APICatalogo.Filters;
 using APICatalogo.Logging;
 using APICatalogo.Models;
+using APICatalogo.RateOptions;
 using APICatalogo.Repositories;
 using APICatalogo.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using System.Text.Json.Serialization;
+using System.Threading.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -120,9 +123,42 @@ builder.Services.AddDbContext<AppDbContext>(
     options => options.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection))
     );
 
+// 162 
+var myOptions = new MyRateLimitOptions();
+builder.Configuration.GetSection(MyRateLimitOptions.MyRateLimit).Bind(myOptions);
+
+// 159
+builder.Services.AddRateLimiter(rateLimitOptions =>
+{
+    rateLimitOptions.AddFixedWindowLimiter(policyName: "fixedwindow", options =>
+    {
+        options.PermitLimit = myOptions.PermitLimit; // 1;
+        options.Window = TimeSpan.FromSeconds(myOptions.Window); // (5);
+        options.QueueLimit = myOptions.QueueLimit; //2;
+        options.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+    });
+
+    rateLimitOptions.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+});
+
+// 161
+builder.Services.AddRateLimiter(options =>
+{
+    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+
+    options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(httpcontext => RateLimitPartition.GetFixedWindowLimiter(
+        partitionKey: httpcontext.User.Identity?.Name ?? httpcontext.Request.Headers.Host.ToString(),
+        factory: partition => new FixedWindowRateLimiterOptions
+        {
+            AutoReplenishment = true,
+            PermitLimit = 5,
+            QueueLimit = 0,
+            Window = TimeSpan.FromSeconds(10)
+        }
+        ));
+});
 
 builder.Services.AddScoped<ApiLoggingFilter>();
-
 // 77
 builder.Services.AddScoped<ICategoriaInterface, CategoriaRepository>();
 // 80
@@ -131,7 +167,6 @@ builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 // 92
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
 // 138 
 builder.Services.AddScoped<ITokenService, TokenService>();
 
@@ -161,6 +196,9 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 // 153
 app.UseRouting();
+// 159
+app.UseRateLimiter();
+
 app.UseCors();
 app.UseAuthorization();
 app.MapControllers();

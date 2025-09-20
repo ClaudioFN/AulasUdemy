@@ -301,6 +301,20 @@ Aulas 54 até 59 (05-08):
 --
 158 = Algoritmos de Rate Limiting.
 ----
-159 ate (20/09):
-159 = 
+159 ate 163(20/09):
+--
+159 = Aplicando RateLimit por código alterando a classe Program.cs e CategoriaController.cs.
+--
+160 = Continuação da aplicação do RateLimit alterando as classes já citadas.
+--
+161 = Novo código para definição global do RateLimit.
+--
+162 = Usando o appsettings.json para obter os valores que vão ser usado no RateLimit criando pasta RateOptions, classe MyRateLimitOptions, alterando a classe Program.cs e o appsettings.json.
+--
+163 = Detalhando motivos e definições de como acontece o versionamento de uma API.
+    = Major => Grandes Mudanças.
+    = Minor => Alterações que ainda são compatíveis com versões anteriores.
+    = Patch => Correções.
+--
+
 
