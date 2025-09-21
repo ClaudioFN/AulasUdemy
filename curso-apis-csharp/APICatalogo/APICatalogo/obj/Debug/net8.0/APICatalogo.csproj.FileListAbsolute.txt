@@ -134,3 +134,7 @@ C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bi
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Asp.Versioning.Abstractions.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Asp.Versioning.Http.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Asp.Versioning.Mvc.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\APICatalogo\APICatalogo\bin\Debug\net8.0\Asp.Versioning.Mvc.ApiExplorer.dll

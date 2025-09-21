@@ -315,6 +315,29 @@ Aulas 54 até 59 (05-08):
     = Major => Grandes Mudanças.
     = Minor => Alterações que ainda são compatíveis com versões anteriores.
     = Patch => Correções.
+----
+164 ate 169(21/09):
 --
+164 = Abordagens de versionamento de API.
+    = Querystring => https://api.exe.com/resource?version=1
+    = URI => https://api.exe.com/v1/resource
+    = Headers => X-API-Version: 1
+    = Media Type => Accept: application/vnd.exe.v1+json
+Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSIONING.HTTP
+--
+165 = Apresentando o versionamento por QueryString e por URI.
+--
+166 = Implementando versionamento Query String.
+--
+167 = Implementando versionamento por URI (mais direto pois só temos que clicar em Excute para pegar a versão mas ele vai pelo default 1.0).
+--
+168 = Definição e implementação do MapToVersion onde dentro de 1 controller conseguimos acesso a diferentes métodos que responderiam a diferentes versões de acordo com a chamada.
+--
+169 = Explicação sobre o .NET 9.0 em que a implementação do Swagger virou decisão do desenvolvedor.
+----
+170 ate ():
+--
+170 = 
+---
 
 
