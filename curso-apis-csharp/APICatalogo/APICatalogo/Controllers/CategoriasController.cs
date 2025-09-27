@@ -95,8 +95,13 @@ namespace APICatalogo.Controllers
 
         // [DisableCors] // 155
         // [DisableRateLimiting] // 159
+        /// <summary>
+        /// Retorna todas as categorias disponiveis
+        /// </summary>
+        /// <returns>Lista de Categorias</returns>
         [Authorize]
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         //[ServiceFilter(typeof(ApiLoggingFilter))]
         public async Task<ActionResult<IEnumerable<CategoriaDTO>>> Get()
         {
@@ -121,6 +126,11 @@ namespace APICatalogo.Controllers
             return Ok(categoriasDto);
         }
 
+        /// <summary>
+        /// Obtem uma nova categoria usando um id especifico
+        /// </summary>
+        /// <param name="id">Valor de identificacao de uma Categoria</param>
+        /// <returns>Retorna detalhes da Categoria especificada pelo ID</returns>
         [HttpGet("{id:int}", Name = "ObterCategoria")]
         public async Task<ActionResult<CategoriaDTO>> Get(int id)
         {
@@ -157,7 +167,14 @@ namespace APICatalogo.Controllers
             }
         }
 
+        /// <summary>
+        /// Atualizar informacoes da Categoria
+        /// </summary>
+        /// <param name="categoriaDto">Dados da Categoria que devem ser alterados (no caso, reenviar dados que nao devem ser alterados com o valor defautl)</param>
+        /// <returns>Categoria com o(s) novo(s) dado(s)</returns>
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<CategoriaDTO>> Post(CategoriaDTO categoriaDto)
         {
             if (categoriaDto is null)
@@ -189,7 +206,17 @@ namespace APICatalogo.Controllers
             return new CreatedAtRouteResult("ObterCategoria", new { id = novaCategoriaDto.CategoriaId }, novaCategoriaDto);
         }
 
+
+        /// <summary>
+        /// Atualizar Categoria Especifica 
+        /// </summary>
+        /// <param name="id">Identificador da Categoria</param>
+        /// <param name="categoriaDto">Dado a ser alterado</param>
+        /// <returns>Categoria com o seu respectivo item alterado</returns>
         [HttpPut("{id:int}")]
+        //[ProducesResponseType(StatusCodes.Status200OK)] // comentado na 175
+        //[ProducesResponseType(StatusCodes.Status400BadRequest)] // comentado na 175
+        [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Put))]
         public async Task<ActionResult<CategoriaDTO>> Put(int id, CategoriaDTO categoriaDto)
         {
             try
@@ -234,6 +261,11 @@ namespace APICatalogo.Controllers
 
         }
 
+        /// <summary>
+        /// Apagar uma Categoria
+        /// </summary>
+        /// <param name="id">Identificador da Categoria que deve ser apagada</param>
+        /// <returns>Confirmação de que a categoria foi apagada</returns>
         //[HttpDelete("id:int")]
         [Authorize(Policy = "AdminOnly")]
         [HttpDelete("{id:int}")]

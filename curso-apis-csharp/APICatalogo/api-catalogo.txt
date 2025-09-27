@@ -335,9 +335,30 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 --
 169 = Explicação sobre o .NET 9.0 em que a implementação do Swagger virou decisão do desenvolvedor.
 ----
-170 ate ():
+170 ate 174():
 --
-170 = 
----
-
-
+170 = Swagger e o pacote Swashbuckle.AspNetCore
+--
+171 = Ajuste simples no Program.cs para tratar de link para detalhes do Swagger (dono, site, licença)
+--
+172 = Instrução de como habilitar os comentários
+--
+173 = Implementando nos endpoints o texto de comentário
+--
+174 = Formas de retorno, firmando um tipo de retorno, inibindo warnings.
+----
+175 ate 180(24/09):
+--
+175 = Usando ApiConventions para definir nos retornos valores defaults gerais para códigos de retorno.
+--
+176 = Alterando o arquivo do projeto para incluir nova tag que faz uma varredura no código em busca de itens não declarados para códigos de retorno.
+--
+177 = Conceitos sobre Testes.
+--
+178 = Iniciando implementações sobre testes. Criação do Projeto ApiCatalogoxUnitTests
+--
+179 = Criação de classes de teste.
+--
+180 = Implementando e realizando os testes implementados.
+----
+181 ate ():

@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>APICatalogo</name>
+    </assembly>
+    <members>
+        <member name="M:APICatalogo.Controllers.CategoriasController.Get">
+            <summary>
+            Retorna todas as categorias disponiveis
+            </summary>
+            <returns>Lista de Categorias</returns>
+        </member>
+        <member name="M:APICatalogo.Controllers.CategoriasController.Get(System.Int32)">
+            <summary>
+            Obtem uma nova categoria usando um id especifico
+            </summary>
+            <param name="id">Valor de identificacao de uma Categoria</param>
+            <returns>Retorna detalhes da Categoria especificada pelo ID</returns>
+        </member>
+        <member name="M:APICatalogo.Controllers.CategoriasController.Post(APICatalogo.DTOs.CategoriaDTO)">
+            <summary>
+            Atualizar informacoes da Categoria
+            </summary>
+            <param name="categoriaDto">Dados da Categoria que devem ser alterados (no caso, reenviar dados que nao devem ser alterados com o valor defautl)</param>
+            <returns>Categoria com o(s) novo(s) dado(s)</returns>
+        </member>
+        <member name="M:APICatalogo.Controllers.CategoriasController.Put(System.Int32,APICatalogo.DTOs.CategoriaDTO)">
+            <summary>
+            Atualizar Categoria Especifica 
+            </summary>
+            <param name="id">Identificador da Categoria</param>
+            <param name="categoriaDto">Dado a ser alterado</param>
+            <returns>Categoria com o seu respectivo item alterado</returns>
+        </member>
+        <member name="M:APICatalogo.Controllers.CategoriasController.Delete(System.Int32)">
+            <summary>
+            Apagar uma Categoria
+            </summary>
+            <param name="id">Identificador da Categoria que deve ser apagada</param>
+            <returns>Confirmação de que a categoria foi apagada</returns>
+        </member>
+        <member name="T:APICatalogo.Migrations.MigracaoInicial">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.MigracaoInicial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.MigracaoInicial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.MigracaoInicial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatalogo.Migrations.AjusteTabelas">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.AjusteTabelas.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.AjusteTabelas.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.AjusteTabelas.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatalogo.Migrations.PopulaCategorias">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.PopulaCategorias.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.PopulaCategorias.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.PopulaCategorias.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatalogo.Migrations.PopulaProdutos">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.PopulaProdutos.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.PopulaProdutos.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.PopulaProdutos.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatalogo.Migrations.CriaTabelasIdentity">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.CriaTabelasIdentity.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.CriaTabelasIdentity.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.CriaTabelasIdentity.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatalogo.Migrations.AjusteApplicationUser">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.AjusteApplicationUser.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.AjusteApplicationUser.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.AjusteApplicationUser.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

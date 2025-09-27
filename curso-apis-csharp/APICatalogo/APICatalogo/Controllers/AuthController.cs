@@ -12,9 +12,12 @@ using System.Security.Claims;
 
 namespace APICatalogo.Controllers;
 
+// TODO: incluir descricao para os endpoints
 [Route("api/[controller]")]
 [ApiController]
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 public class AuthController : ControllerBase
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 {
     private readonly ITokenService _tokenService;
     private readonly UserManager<ApplicationUser> _userManager;

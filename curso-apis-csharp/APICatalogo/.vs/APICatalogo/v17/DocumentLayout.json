@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\apicatalogo\\apicatalogo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFF8C2C3-65AE-4D4F-AFEC-308C08FAF2CA}|ApiCatalogoxUnitTests\\ApiCatalogoxUnitTests.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\apicatalogo\\apicatalogoxunittests\\unittests\\getprodutosunittests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFF8C2C3-65AE-4D4F-AFEC-308C08FAF2CA}|ApiCatalogoxUnitTests\\ApiCatalogoxUnitTests.csproj|solutionrelative:apicatalogoxunittests\\unittests\\getprodutosunittests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\apicatalogo\\apicatalogo\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFF8C2C3-65AE-4D4F-AFEC-308C08FAF2CA}|ApiCatalogoxUnitTests\\ApiCatalogoxUnitTests.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\apicatalogo\\apicatalogoxunittests\\unittests\\produtosunittestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFF8C2C3-65AE-4D4F-AFEC-308C08FAF2CA}|ApiCatalogoxUnitTests\\ApiCatalogoxUnitTests.csproj|solutionrelative:apicatalogoxunittests\\unittests\\produtosunittestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\apicatalogo\\apicatalogo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\apicatalogo\\apicatalogo\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\apicatalogo\\apicatalogo\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\apicatalogo\\apicatalogo\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\apicatalogo\\apicatalogo\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\apicatalogo\\apicatalogo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1CC52474-350B-4246-834E-AE6F608DB2A3}|APICatalogo\\APICatalogo.csproj|solutionrelative:apicatalogo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,17 +38,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "CategoriasController.cs",
               "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\APICatalogo\\Controllers\\CategoriasController.cs",
               "RelativeDocumentMoniker": "APICatalogo\\Controllers\\CategoriasController.cs",
               "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\APICatalogo\\Controllers\\CategoriasController.cs",
               "RelativeToolTip": "APICatalogo\\Controllers\\CategoriasController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABYAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAMsAAAAAAAAAAADwv9kAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-20T23:45:56.894Z",
               "IsPinned": true,
@@ -48,13 +56,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "ProdutosController.cs",
               "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\APICatalogo\\Controllers\\ProdutosController.cs",
               "RelativeDocumentMoniker": "APICatalogo\\Controllers\\ProdutosController.cs",
               "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\APICatalogo\\Controllers\\ProdutosController.cs",
               "RelativeToolTip": "APICatalogo\\Controllers\\ProdutosController.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAIBJwF4AAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAAAA0AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-20T23:53:29.581Z",
               "IsPinned": true,
@@ -62,13 +70,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\APICatalogo\\Program.cs",
               "RelativeDocumentMoniker": "APICatalogo\\Program.cs",
               "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\APICatalogo\\Program.cs",
               "RelativeToolTip": "APICatalogo\\Program.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAAAKkAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAGkAAAAAAAAAAIBJwHQAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-20T23:43:49.508Z",
               "IsPinned": true,
@@ -76,13 +84,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\APICatalogo\\appsettings.json",
               "RelativeDocumentMoniker": "APICatalogo\\appsettings.json",
               "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\APICatalogo\\appsettings.json",
               "RelativeToolTip": "APICatalogo\\appsettings.json",
-              "ViewState": "AgIAAAkAAAAAAAAAAADwvxYAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-09-09T22:47:37.549Z",
               "IsPinned": true,
@@ -90,21 +98,48 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\APICatalogo\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "APICatalogo\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\APICatalogo\\Controllers\\AuthController.cs",
               "RelativeToolTip": "APICatalogo\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-12T23:05:32.872Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProdutosUnitTestController.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\ApiCatalogoxUnitTests\\UnitTests\\ProdutosUnitTestController.cs",
+              "RelativeDocumentMoniker": "ApiCatalogoxUnitTests\\UnitTests\\ProdutosUnitTestController.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\ApiCatalogoxUnitTests\\UnitTests\\ProdutosUnitTestController.cs",
+              "RelativeToolTip": "ApiCatalogoxUnitTests\\UnitTests\\ProdutosUnitTestController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T22:55:15.358Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetProdutosUnitTests.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\ApiCatalogoxUnitTests\\UnitTests\\GetProdutosUnitTests.cs",
+              "RelativeDocumentMoniker": "ApiCatalogoxUnitTests\\UnitTests\\GetProdutosUnitTests.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\APICatalogo\\ApiCatalogoxUnitTests\\UnitTests\\GetProdutosUnitTests.cs",
+              "RelativeToolTip": "ApiCatalogoxUnitTests\\UnitTests\\GetProdutosUnitTests.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAAAFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T22:49:33.279Z",
+              "EditorCaption": ""
             }
           ]
         }
