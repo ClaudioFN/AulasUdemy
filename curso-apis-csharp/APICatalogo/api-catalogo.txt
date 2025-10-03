@@ -361,4 +361,18 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 --
 180 = Implementando e realizando os testes implementados.
 ----
-181 ate ():
+181 ate 182(30/09):
+--
+181 = Testes Unitários para Post
+--
+182 = Testes Unitários para Put
+----
+183 ate 184 (01/10):
+--
+183 = Testes Unitários para Delete
+--
+184 = Explicando a Clean Arquiteture (com criação de vários projetos internos a API que terão seus pontos específicos)
+----
+185 ate ():
+--
+185 = 

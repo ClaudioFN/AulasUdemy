@@ -244,6 +244,7 @@ namespace APICatalogo.Controllers
 
 
         [HttpDelete("{id:int}")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<ProdutoDTO>> Delete(int id)
         {
             try
@@ -265,7 +266,7 @@ namespace APICatalogo.Controllers
                 var produto = await _unitOfWork.ProdutoRepository.GetAsync(c => c.ProdutoId == id);
 
                 if (produto is null)
-                    return StatusCode(500, $"Falha ao excluir o produto de ID = {id}");
+                    return NotFound("Produto Não Encontrado!");
 
                 //var deletado = _repository.Delete(produto);
                 var deletado = _unitOfWork.ProdutoRepository.Delete(produto);
