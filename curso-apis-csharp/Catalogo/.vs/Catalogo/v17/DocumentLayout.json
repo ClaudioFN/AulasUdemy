@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\Catalogo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C36AF-C36E-4606-B929-BD1D00ADDCE5}|Catalogo.CrossCutting\\Catalogo.CrossCutting.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\catalogo\\catalogo.crosscutting\\ioc\\dependencyinjectionapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F25C36AF-C36E-4606-B929-BD1D00ADDCE5}|Catalogo.CrossCutting\\Catalogo.CrossCutting.csproj|solutionrelative:catalogo.crosscutting\\ioc\\dependencyinjectionapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F25C36AF-C36E-4606-B929-BD1D00ADDCE5}|Catalogo.CrossCutting\\Catalogo.CrossCutting.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\catalogo\\catalogo.crosscutting\\catalogo.crosscutting.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F25C36AF-C36E-4606-B929-BD1D00ADDCE5}|Catalogo.CrossCutting\\Catalogo.CrossCutting.csproj|solutionrelative:catalogo.crosscutting\\catalogo.crosscutting.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{776F1F5E-C5BC-415F-93E7-8F5D49E9D44F}|Catalogo.Infrastructure\\Catalogo.Infrastructure.csproj|c:\\users\\franc\\onedrive\\documentos\\codigos\\apiscsharp\\catalogo\\catalogo.infrastructure\\entitiesconfiguration\\produtoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{776F1F5E-C5BC-415F-93E7-8F5D49E9D44F}|Catalogo.Infrastructure\\Catalogo.Infrastructure.csproj|solutionrelative:catalogo.infrastructure\\entitiesconfiguration\\produtoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Catalogo.CrossCutting",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\Catalogo\\Catalogo.CrossCutting\\Catalogo.CrossCutting.csproj",
+              "RelativeDocumentMoniker": "Catalogo.CrossCutting\\Catalogo.CrossCutting.csproj",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\Catalogo\\Catalogo.CrossCutting\\Catalogo.CrossCutting.csproj",
+              "RelativeToolTip": "Catalogo.CrossCutting\\Catalogo.CrossCutting.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-08T22:37:59.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DependencyInjectionAPI.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\Catalogo\\Catalogo.CrossCutting\\IoC\\DependencyInjectionAPI.cs",
+              "RelativeDocumentMoniker": "Catalogo.CrossCutting\\IoC\\DependencyInjectionAPI.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\Catalogo\\Catalogo.CrossCutting\\IoC\\DependencyInjectionAPI.cs",
+              "RelativeToolTip": "Catalogo.CrossCutting\\IoC\\DependencyInjectionAPI.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T22:33:07.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProdutoConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\Catalogo\\Catalogo.Infrastructure\\EntitiesConfiguration\\ProdutoConfiguration.cs",
+              "RelativeDocumentMoniker": "Catalogo.Infrastructure\\EntitiesConfiguration\\ProdutoConfiguration.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Documentos\\Codigos\\APIsCSharp\\Catalogo\\Catalogo.Infrastructure\\EntitiesConfiguration\\ProdutoConfiguration.cs",
+              "RelativeToolTip": "Catalogo.Infrastructure\\EntitiesConfiguration\\ProdutoConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T22:32:28.559Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

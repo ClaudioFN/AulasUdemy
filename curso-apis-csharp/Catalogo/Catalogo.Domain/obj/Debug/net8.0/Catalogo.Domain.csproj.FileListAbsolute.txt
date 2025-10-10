@@ -1,0 +1,11 @@
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Domain\bin\Debug\net8.0\Catalogo.Domain.deps.json
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Domain\bin\Debug\net8.0\Catalogo.Domain.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Domain\bin\Debug\net8.0\Catalogo.Domain.pdb
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Domain\obj\Debug\net8.0\Catalogo.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Domain\obj\Debug\net8.0\Catalogo.Domain.AssemblyInfoInputs.cache
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Domain\obj\Debug\net8.0\Catalogo.Domain.AssemblyInfo.cs
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Domain\obj\Debug\net8.0\Catalogo.Domain.csproj.CoreCompileInputs.cache
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Domain\obj\Debug\net8.0\Catalogo.Domain.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Domain\obj\Debug\net8.0\refint\Catalogo.Domain.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Domain\obj\Debug\net8.0\Catalogo.Domain.pdb
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Domain\obj\Debug\net8.0\ref\Catalogo.Domain.dll

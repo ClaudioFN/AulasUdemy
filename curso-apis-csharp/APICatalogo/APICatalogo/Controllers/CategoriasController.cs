@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json;
 using X.PagedList;
 
@@ -28,14 +29,17 @@ namespace APICatalogo.Controllers
         private readonly IUnitOfWork _unitOfWork;
         private readonly IConfiguration _configuration;
         private readonly ILogger _logger;
+        private readonly IMemoryCache _cache;
+        private const string CacheCaegoriasKey = "CacheCategorias";
         //private readonly IMeuServico _meuServico;
 
         public CategoriasController(/*ICategoriaInterface repository , IMeuServico meuServico,*/ IConfiguration configuration
-            , ILogger<CategoriasController> logger, IUnitOfWork unitOfWork)
+            , ILogger<CategoriasController> logger, IUnitOfWork unitOfWork, IMemoryCache cache)
         {
             _configuration = configuration;
             _logger = logger;
             _unitOfWork = unitOfWork;
+            _cache = cache;
             //_meuServico = meuServico;
         }
 
@@ -105,22 +109,17 @@ namespace APICatalogo.Controllers
         //[ServiceFilter(typeof(ApiLoggingFilter))]
         public async Task<ActionResult<IEnumerable<CategoriaDTO>>> Get()
         {
-            //return _context.Categorias.AsNoTracking().ToList();// AsNoTracking = impede rastreio do estado dos objetos e armazenamento em cache que sobrecarregue a aplicacao
-            //var categorias = _repository.GetAllE();
-            var categorias = await _unitOfWork.CategoriaRepository.GetAllAsync();
-
-            /*var categoriasDto = new List<CategoriaDTO>();
-            foreach (var categoria in categorias)
+            if(!_cache.TryGetValue(CacheCaegoriasKey, out IEnumerable<Categoria>? categorias))
             {
-                var categoriaDTO = new CategoriaDTO()
+                categorias = await _unitOfWork.CategoriaRepository.GetAllAsync();
+                if (categorias is null || !categorias.Any())
                 {
-                    CategoriaId = categoria.CategoriaId,
-                    Nome = categoria.Nome,
-                    ImagemUrl = categoria.ImagemUrl
-                };
-                categoriasDto.Add(categoriaDTO);
-            }*/
+                    _logger.LogWarning("Não existem categorias!");
+                    return NotFound("Não existem categorias!!");
+                }
 
+                SetCache(CacheCaegoriasKey, categorias);
+            }
             var categoriasDto = categorias.ToCategoriaDTOList();
 
             return Ok(categoriasDto);
@@ -142,13 +141,23 @@ namespace APICatalogo.Controllers
                 //var categoria = _context.Categorias.FirstOrDefault(p => p.CategoriaId == id);
 
                 //var categoria = _repository.Get(c => c.CategoriaId == id);
-                var categoria = await _unitOfWork.CategoriaRepository.GetAsync(c => c.CategoriaId == id);
 
-                if (categoria is null)
+                //var CacheCategoriaKey = $"CacheCategoria_{id}";
+
+                var cacheKey = GetCategoriaCacheKey(id);
+                
+                if(!_cache.TryGetValue(cacheKey, out Categoria? categoria))
                 {
-                    _logger.LogInformation($" ======================================GET API CATEGORIAS ID = {id} NOT FOUND ======================================");
+                    categoria = await _unitOfWork.CategoriaRepository.GetAsync(c => c.CategoriaId == id);
 
-                    return NotFound("Categoria não encontrada!");
+                    if (categoria is null)
+                    {
+                        _logger.LogInformation($" ======================================GET API CATEGORIAS ID = {id} NOT FOUND ======================================");
+
+                        return NotFound("Categoria não encontrada!");
+                    }
+
+                    SetCache(cacheKey, categoria);
                 }
 
                 /*var categoriaDTO = new CategoriaDTO()
@@ -180,27 +189,26 @@ namespace APICatalogo.Controllers
             if (categoriaDto is null)
                 return BadRequest();
 
-            //_context.Categorias.Add(categoria);
-            //_context.SaveChanges();
-            //var categoriaCriada = _repository.Create(categoria);
-
-            /*var categoria = new Categoria()
-            {
-                CategoriaId = categoriaDto.CategoriaId,
-                Nome = categoriaDto.Nome,
-                ImagemUrl = categoriaDto.ImagemUrl
-            };*/
             var categoria = categoriaDto.ToCategoria();
 
             var categoriaCriada = _unitOfWork.CategoriaRepository.Create(categoria);
+
             await _unitOfWork.CommitAsync();
 
-            /*var novaCategoriaDto = new CategoriaDTO()
+            /*_cache.Remove(CacheCaegoriasKey);
+
+            var cacheKey = $"CacheCategoria_{categoriaCriada.CategoriaId}";
+
+            var cacheOptions = new MemoryCacheEntryOptions
             {
-                CategoriaId = categoria.CategoriaId,
-                Nome = categoria.Nome,
-                ImagemUrl = categoria.ImagemUrl
-            };*/
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(30),
+                SlidingExpiration = TimeSpan.FromSeconds(15),
+                Priority = CacheItemPriority.High
+            };
+            _cache.Set(cacheKey, categoria, cacheOptions);
+            */
+            InvalidateCacheAfterChange(categoriaCriada.CategoriaId, categoriaCriada);
+
             var novaCategoriaDto = categoriaCriada.ToCategoriaDTO();
 
             return new CreatedAtRouteResult("ObterCategoria", new { id = novaCategoriaDto.CategoriaId }, novaCategoriaDto);
@@ -221,7 +229,7 @@ namespace APICatalogo.Controllers
         {
             try
             {
-                if (id != categoriaDto.CategoriaId)
+                if (id >= 0 || categoriaDto is null || id != categoriaDto?.CategoriaId)
                 {
                     _logger.LogWarning($"Dados Inválidos..");
                     return BadRequest();
@@ -242,6 +250,21 @@ namespace APICatalogo.Controllers
 
                 var categoriaAtualizada = _unitOfWork.CategoriaRepository.Update(categoria);
                 await _unitOfWork.CommitAsync();
+
+                /*_cache.Set($"CacheCategoria_{id}", categoriaAtualizada, new MemoryCacheEntryOptions
+                {
+                    AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(30),
+                    SlidingExpiration = TimeSpan.FromSeconds(15),
+                    Priority = CacheItemPriority.High
+                });
+
+                _cache.Remove(CacheCaegoriasKey);*/
+
+                InvalidateCacheAfterChange(id, categoriaAtualizada);
+
+                //_cache.Set(cacheKey, categoria, cacheOptions);
+
+
 
                 /*var categoriaAtualizadaDto = new CategoriaDTO()
                 {
@@ -285,12 +308,10 @@ namespace APICatalogo.Controllers
             var categoriaExcluida = _unitOfWork.CategoriaRepository.Delete(categoria);
             await _unitOfWork.CommitAsync();
 
-            /*var categoriaExcluidaDto = new CategoriaDTO()
-            {
-                CategoriaId = categoriaExcluida.CategoriaId,
-                Nome = categoriaExcluida.Nome,
-                ImagemUrl = categoriaExcluida.ImagemUrl
-            };*/
+            //_cache.Remove($"CacheCategoria_{id}");
+            //_cache.Remove(CacheCaegoriasKey);
+
+            InvalidateCacheAfterChange(id);
 
             var categoriaExcluidaDto = categoriaExcluida.ToCategoriaDTO();
 
@@ -308,5 +329,32 @@ namespace APICatalogo.Controllers
         {
             return meuServico.Saudacao(nome);
         }
+
+        private string GetCategoriaCacheKey(int id) => $"CacheCategoria_{id}";
+
+        private void SetCache<T>(string key, T data)
+        {
+            var cacheOptions = new MemoryCacheEntryOptions
+            {
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(30),
+                SlidingExpiration = TimeSpan.FromSeconds(15),
+                Priority = CacheItemPriority.High
+            };
+            _cache.Set(key, data, cacheOptions);
+        }
+
+        private void InvalidateCacheAfterChange(int id, Categoria? categoria = null)
+        {
+            _cache.Remove(CacheCaegoriasKey);
+            _cache.Remove(GetCategoriaCacheKey(id));
+
+            if(categoria != null)
+            {
+                SetCache(GetCategoriaCacheKey(id), categoria);
+            }
+        }
     }
+
+
+
 }

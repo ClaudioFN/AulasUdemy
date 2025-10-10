@@ -1,0 +1,15 @@
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Infrastructure\bin\Debug\net8.0\Catalogo.Infrastructure.deps.json
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Infrastructure\bin\Debug\net8.0\Catalogo.Infrastructure.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Infrastructure\bin\Debug\net8.0\Catalogo.Infrastructure.pdb
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Infrastructure\bin\Debug\net8.0\Catalogo.Domain.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Infrastructure\bin\Debug\net8.0\Catalogo.Domain.pdb
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Infrastructure\obj\Debug\net8.0\Catalogo.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Infrastructure\obj\Debug\net8.0\Catalogo.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Infrastructure\obj\Debug\net8.0\Catalogo.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Infrastructure\obj\Debug\net8.0\Catalogo.Infrastructure.AssemblyInfo.cs
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Infrastructure\obj\Debug\net8.0\Catalogo.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Infrastructure\obj\Debug\net8.0\Catalogo.3A12E00E.Up2Date
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Infrastructure\obj\Debug\net8.0\Catalogo.Infrastructure.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Infrastructure\obj\Debug\net8.0\refint\Catalogo.Infrastructure.dll
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Infrastructure\obj\Debug\net8.0\Catalogo.Infrastructure.pdb
+C:\Users\franc\OneDrive\Documentos\Codigos\APIsCSharp\Catalogo\Catalogo.Infrastructure\obj\Debug\net8.0\ref\Catalogo.Infrastructure.dll

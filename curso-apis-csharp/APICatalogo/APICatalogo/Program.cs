@@ -211,6 +211,9 @@ builder.Services.AddTransient<IMeuServico, MeuServico>();
 //101
 builder.Services.AddAutoMapper(typeof(ProdutoDTOMappingProfile));
 
+// 192
+builder.Services.AddMemoryCache();
+
 var app = builder.Build(); // a66 - da detalhes disso aqui como middlewares
 
 // Configure the HTTP request pipeline.

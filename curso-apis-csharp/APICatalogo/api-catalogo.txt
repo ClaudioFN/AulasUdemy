@@ -373,6 +373,45 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 --
 184 = Explicando a Clean Arquiteture (com criação de vários projetos internos a API que terão seus pontos específicos)
 ----
-185 ate ():
+185 ate 192(08/10):
 --
-185 = 
+185 = Criando o novo Solution (Catalogo), criando os projetos dela e realizando a parametrização das dependências.
+--
+186 = Criação das pastas para cada Projeto.
+-- 
+187 = só mostrou o projeto já pronto...
+-- 
+188 = só mostrou os detalhes pós projeto pronto...
+--
+189 = Explicações de funcionamento de diferentes formas de cache e vantagens / desvantagens.
+-- 
+190 = MemoryCache usado no IMemoryCache (Microsoft.Extensions.Caching.Memory)
+    => Set = armazenar valor no cache
+    => TryGetValue = tentar obter valor do cache usando uma chave.
+    => GetOrCreate = obter valor de cache pela chave.
+    => GetOrCreateAsync = assíncrono do GetOrCreate
+    => Remove = remove um item do cache pela chave
+    => Cear() = remover todas as chaves
+    => MemoryCacheEntryOption = configurar o cache
+--
+191 = Roteiro de implementação
+--
+192 = Implementando o cache do Get para CategoriasController.cs e Program.cs alterados
+----
+193 ate 193(09/10):
+--
+193 = GET com ID com cache
+----
+194 ate 196(10/10):
+--
+194 = POST com cache.
+--
+195 = PUT com cache.
+--
+196 = DELETE com cache.
+--
+197 = Altera código do cache para melhorar a legibilidade e implementação.
+--
+198 = Continuação da implementação da melhoria.
+--
+199 = 
