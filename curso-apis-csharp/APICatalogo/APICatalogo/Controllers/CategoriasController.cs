@@ -103,7 +103,7 @@ namespace APICatalogo.Controllers
         /// Retorna todas as categorias disponiveis
         /// </summary>
         /// <returns>Lista de Categorias</returns>
-        [Authorize]
+        //[Authorize]
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         //[ServiceFilter(typeof(ApiLoggingFilter))]
@@ -229,7 +229,7 @@ namespace APICatalogo.Controllers
         {
             try
             {
-                if (id >= 0 || categoriaDto is null || id != categoriaDto?.CategoriaId)
+                if (id <= 0 || categoriaDto is null || id != categoriaDto?.CategoriaId)
                 {
                     _logger.LogWarning($"Dados Inválidos..");
                     return BadRequest();

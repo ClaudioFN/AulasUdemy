@@ -413,5 +413,64 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 197 = Altera código do cache para melhorar a legibilidade e implementação.
 --
 198 = Continuação da implementação da melhoria.
+----
+199 ate 203(11/10):
 --
-199 = 
+199 = Deploy em pasta.
+--
+200 = Deploy em servidor IIS.
+--
+201 = Deploy em servidor e acessando por site.
+--
+202 = Apresentação do módulo HttpClientFactory.
+--
+203 = Conceitos.
+----
+204 ate 205(12/10):
+--
+204 = Descrição das próximas alterações.
+--
+205 = Começando a criação de classes e demais alterações.
+----
+206 ate 210(13/10):
+--
+206 = Continuação das alterações dos métodos implementados em CategoriaService.cs.
+--
+207 = Criando o controller e a primeira página.
+-- 
+208 = Página para criar a categoria.
+--
+209 = Página para alterar a categoria.
+--
+210 = Página para excluir a categoria.
+----
+211 ate 213(14/10):
+--
+211 = Teoria de como será a implementação para cobrir essa etapa da autenticação.
+--
+212 = Alteração e criação de classes para usar a autenticação.
+--
+213 = Criar página de login e o de obter acesso ao Token.
+-----
+214 ate (): 
+--
+214 = Criando ProdutoViewModel, IProdutoService  ProdutoService para uso do fluxo de produtos e ajuste pontual no _Layout.cshtml.
+-----
+215 ate 220(17/10):
+--
+215 = Criação dos endpoints para uso na API para Produtos.
+-- 
+216 = Criação do Controller ProdutosController e implementação inicial.
+--
+217 = Criação de um Produto.
+--
+218 = Exibir detalhes de um Produto.
+--
+219 = Edição de um Produto.
+--
+220 = Excluindo o Produto.
+----
+221 ate ():
+--
+221 = 
+-- 
