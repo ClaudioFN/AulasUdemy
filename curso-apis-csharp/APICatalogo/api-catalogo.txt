@@ -470,7 +470,58 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 --
 220 = Excluindo o Produto.
 ----
-221 ate ():
+221 ate 232(18/10):
 --
-221 = 
+221 até 227 = Não houve aprofundamento no assunto para registrar o novo projeto. Apenas acompanhamento de informações. 
+--
+228 ate 232 = Esse projeto foi criado e está com commit no repositório. Foi simples e sem conexão com banco de dados.
+----
+229 ate 240(19/10):
+--
+229 até 236 = Esse conjunto de aulas não foi elaborado pois usava como banco de dados um banco diferente do em uso atualmente (MySQL) e não havia ganho elaborar o código.
+--
+237 = Introdução a Minimal API de ApiCatalogo.
+--
+238 = Criação da solution nova.
+--
+239 = Elaboração das dependências.
+--
+240 = dotnet tool install --global dotnet-ef => caso não tenha o Donet EF instalado, usar uma CMD para instalar e usar essa ferramenta ao invés de um pacote para realizar o migrations.
+--
+241 = Criação da pasta Models e as respectivas entidades.
+--
+242 = Fluent API para tratar de limitação nas classes de domínio.
+-----
+243 ate 252(20/10):
+--
+243 = Configuração das entidades para serem usadas com as devidas limitações no migrations.
 -- 
+244 = Definição da string de conexão (site connectionstrings.com tem exemplares de como fazer uma string).
+--
+245 = Executando o migrations com o comando no CMD dotnet ef migrations add MigracaoInicial
+    => dotnet ef database update MigracaoInicial - para efetivar a migração
+--
+246 = Criando os endpoints para a API.
+--
+247 = Criando o enpoint Post para criar novas categorias.
+--
+248 = Criando o enpoint Get para buscar categorias.
+--
+249 = Criando o endpoint Put para atualizar uma categoria.
+--
+250 = Criando o endpoint Delete para deletar uma categoria.
+--
+251 = Criação de todos os endpoints Map Post, Get, Put e Delete para produtos.
+--
+252 = Explicações para a implementação do Jwt
+-----
+253 ate 254(22/10):
+--
+253 = Implementando as classes do ITokenService e TokenService, alterando a classe Program.cs e incluindo validações por endpoint.
+--
+254 = Ajustando o login com Bearer.
+----
+255 ate ():
+--
+255 = 
+--
