@@ -33,3 +33,9 @@ Lista de comandos -
 
 - `npm install -g browser-sync`: instalar o Browser Sync após já ter instalado o Node.JS. Serve para iniciar ambiente WEB local.
 - `browser-sync start --server --directory --files "**/*"`: iniciar server localmente a partir da pasta selecionada (normalmente a pasta raiz do projeto).
+
+**Curso Web API ASP .NET Core Essencial (.NET 8 / .NET 9)**
+
+Lista de Comandos - 
+
+- SEM COMANDOS PARA COBRIR EM UMA LISTA

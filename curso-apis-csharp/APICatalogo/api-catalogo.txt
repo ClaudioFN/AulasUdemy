@@ -102,7 +102,6 @@ Aulas 54 até 59 (05-08):
 --
 86 = Alterando controllers para uso dos itens genéricos
 ----
-==============================================================PENDENTE DE COMMIT PARA DIA 23 A PARTIR DAQUI = feito em 22/08
 87 ate 91 (18/08):
 87 = Alterando as classes de Controller (Produto e Categoria).
 --
@@ -122,7 +121,6 @@ Aulas 54 até 59 (05-08):
 --
 94 = Testes dos endpoints
 ----
-==============================================================PENDENTE DE COMMIT PARA DIA 30 A PARTIR DAQUI = feito em 23/08
 95 ate 100 (22/08): 
 --
 95 = Apresentação do fluxo de aulas.
@@ -137,7 +135,6 @@ Aulas 54 até 59 (05-08):
 --
 100 = Apresentando o AutoMapper => Mapeamento entre objetos que representam as entidades e os objetos que representam os DTOs filtrando as propriedades que desejamos expor.
 ----
-==============================================================PENDENTE DE COMMIT PARA DIA 30 A PARTIR DAQUI = feito em 24/08
 101 ate 106 (24/08): 
 --
 101 = Implementando o Mapper com criação de classe (ProdutoDTOMappingProfile) e alteração do controller Produto.
@@ -152,7 +149,6 @@ Aulas 54 até 59 (05-08):
 --
 106 = Texto para ajustar uma lógica na validação presente na classe Controller do Produto, no método Patch.
 -----
-==============================================================PENDENTE DE COMMIT PARA DIA 30 A PARTIR DAQUI
 107 ate 109 (25/08):
 --
 107 = Apresentação de primeiro conjunto de ferramentas alternativas ao AutoMapper e aplicação de uma delas.
@@ -218,7 +214,6 @@ Aulas 54 até 59 (05-08):
 --
 128 = Explicação da migração a apresentação de comandos a serem usados.
 ----
-==============================================================PENDENTE DE COMMIT PARA DIA 12 A PARTIR DAQUI = FEITO
 129 (08/09):
 --
 129 = Alterando a classe AppDbContext.cs para uso do IdentityDbContext e incluindo na classe Program.cs
@@ -269,7 +264,6 @@ Aulas 54 até 59 (05-08):
 144 = Explicações sobre Role.
 --
 145 = Implementação do endpoint para Role.
-==============================================================PENDENTE DE COMMIT PARA DIA 19 A PARTIR DAQUI
 ----
 146 ate 148 (15/09):
 --
@@ -521,7 +515,7 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 --
 254 = Ajustando o login com Bearer.
 ----
-255 ate ():
+255 ate 258: Rumando a conclusão do curso.
 --
-255 = 
+259 até 298 = Aulas complementares e assistidas sem criação de código. 
 --
