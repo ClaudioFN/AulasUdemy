@@ -1,3 +1,5 @@
+Aulas 1 até 51(Sem Data):
+
 Aulas 49 até 52 (04-08):
 Serialização JSON alterada na classe Program.cs e incluindo na linha do código 
 builder.Services.AddControllers();
@@ -89,7 +91,7 @@ Aulas 54 até 59 (05-08):
 80 (14/08):
 80 = Criação das classes IProdutoRepository (interface) e ProdutoRepository (classe concreta)
 ----
-81 ate (16/08):
+81 até (16/08):
 81 = Completando a classe ProdutosController.cs como a nova formatação de uso de dados.
 --
 82 = teste das alterações para Produto.
@@ -102,7 +104,7 @@ Aulas 54 até 59 (05-08):
 --
 86 = Alterando controllers para uso dos itens genéricos
 ----
-87 ate 91 (18/08):
+87 até 91 (18/08):
 87 = Alterando as classes de Controller (Produto e Categoria).
 --
 88 = Testando as alterações no Swagger.
@@ -114,14 +116,14 @@ Aulas 54 até 59 (05-08):
 --
 91 = Completando a implementação do Unit Of Work (classe concreta UnitOfWork.cs)
 ----
-92 ate 94 (20/08):
+92 até 94 (20/08):
 92 = Implementando as trocas do Repository
 --
 93 = Ajustando os Controllers
 --
 94 = Testes dos endpoints
 ----
-95 ate 100 (22/08): 
+95 até 100 (22/08): 
 --
 95 = Apresentação do fluxo de aulas.
 --
@@ -135,7 +137,7 @@ Aulas 54 até 59 (05-08):
 --
 100 = Apresentando o AutoMapper => Mapeamento entre objetos que representam as entidades e os objetos que representam os DTOs filtrando as propriedades que desejamos expor.
 ----
-101 ate 106 (24/08): 
+101 até 106 (24/08): 
 --
 101 = Implementando o Mapper com criação de classe (ProdutoDTOMappingProfile) e alteração do controller Produto.
 --
@@ -149,7 +151,7 @@ Aulas 54 até 59 (05-08):
 --
 106 = Texto para ajustar uma lógica na validação presente na classe Controller do Produto, no método Patch.
 -----
-107 ate 109 (25/08):
+107 até 109 (25/08):
 --
 107 = Apresentação de primeiro conjunto de ferramentas alternativas ao AutoMapper e aplicação de uma delas.
 --
@@ -157,13 +159,13 @@ Aulas 54 até 59 (05-08):
 --
 109 = Introdução a Paginação de grandes quantidade de dados e interação de código (sem usar o projeto Catalogo).
 ---
-110 ate 111 (26/08):
+110 até 111 (26/08):
 --
 110 = Paginação simples com criação da classe PaginacaoParameters.cs (para os parâmetros) e adaptação em Produto (IProdutoRepository e ProdutoRepository) e alteração da classe controller.
 --
 111 = Explicação da próxima melhoria de paginação.
 ----
-112 ate 115 (27/08):
+112 até 115 (27/08):
 --
 112 = Implementando a paginação aprimorada criando nova classe PageList, alterando o IProdutoRepository e ProdutoRepository e ajustando o Controller do Produto.
 --
@@ -187,7 +189,7 @@ Aulas 54 até 59 (05-08):
 --
 119 = Mostrando a programação assíncrona
 ----
-120 ate 125(06/09):
+120 até 125(06/09):
 --
 120 = Migração de código para assíncrono
 --
@@ -201,14 +203,14 @@ Aulas 54 até 59 (05-08):
 --
 125 = Apresentando o que é o Autenticação e Autorização para a API.
 ----
-126 ate 128(06/09):
+126 até 128(06/09):
 --
 126 = Introdutório ao assunto de JWT 
 ----
 127 ate(07/09):
 --
 127 = Implementando parte do assunto de configuração de código para autenticação. Tem outros comandos na aula.
-    = prompt de comando: cd <PASTA DO PROJETO ATE CHEGAR NA RAIZ DELE COM O SLN NA PASTA>
+    = prompt de comando: cd <PASTA DO PROJETO até CHEGAR NA RAIZ DELE COM O SLN NA PASTA>
     = comando: dotnet user-jwts create
     = copiar Token gerado para usar o Bearer via Postman
 --
@@ -221,9 +223,9 @@ Aulas 54 até 59 (05-08):
     = dotnet ef - comando para confirmar que tem o pacote instalado
     = dotnet tool install --global dotnet-ef - instalar o pacote de migrations
     = dotnet ef migrations add CriaTabelasIdentity --verbose - cria a migration (so funciona na pasta dentro da SLN)
-    = dotnet ef database update --verbose - implementa as modificações no bd
+    = dotnet ef database updaté --verbose - implementa as modificações no bd
 ----
-130 ate 131 (09/09):
+130 até 131 (09/09):
 --
 130 = Alterações no fluxo da classe program.cs, do appsettings.json e no resultados
 --
@@ -237,7 +239,7 @@ Aulas 54 até 59 (05-08):
 --
 133 = Explicações para os próximos passos.
 ----
-134 ate (12/09):
+134 até (12/09):
 --
 134 = Implementando nova Interface ITokenservice e nova classe TokenService (apenas primeiro método).
 --
@@ -249,7 +251,7 @@ Aulas 54 até 59 (05-08):
 --
 138 = Criação dos endpoints (aqui apenas o primeiro endpoint de Login).
 ----
-139 ate (13/09):
+139 até (13/09):
 --
 139 = Implementação do endpoint Register.
 --
@@ -265,7 +267,7 @@ Aulas 54 até 59 (05-08):
 --
 145 = Implementação do endpoint para Role.
 ----
-146 ate 148 (15/09):
+146 até 148 (15/09):
 --
 146 = Explicação e projeto alterado na AuthController.cs para novo endpoint de adicionar Role.
 --
@@ -273,7 +275,7 @@ Aulas 54 até 59 (05-08):
 --
 148 = Novas aplicações de roles em classes alteradas.
 -----
-149 ate 158(19/09):
+149 até 158(19/09):
 --
 149 = 
 --
@@ -293,9 +295,9 @@ Aulas 54 até 59 (05-08):
 --
 157 = Limitação de taxa (RateLimiting) para evitar sobrecargas, evitar DDO e reduzir custo por uso de recursos.
 --
-158 = Algoritmos de Rate Limiting.
+158 = Algoritmos de Raté Limiting.
 ----
-159 ate 163(20/09):
+159 até 163(20/09):
 --
 159 = Aplicando RateLimit por código alterando a classe Program.cs e CategoriaController.cs.
 --
@@ -310,7 +312,7 @@ Aulas 54 até 59 (05-08):
     = Minor => Alterações que ainda são compatíveis com versões anteriores.
     = Patch => Correções.
 ----
-164 ate 169(21/09):
+164 até 169(21/09):
 --
 164 = Abordagens de versionamento de API.
     = Querystring => https://api.exe.com/resource?version=1
@@ -329,7 +331,7 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 --
 169 = Explicação sobre o .NET 9.0 em que a implementação do Swagger virou decisão do desenvolvedor.
 ----
-170 ate 174():
+170 até 174():
 --
 170 = Swagger e o pacote Swashbuckle.AspNetCore
 --
@@ -341,7 +343,7 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 --
 174 = Formas de retorno, firmando um tipo de retorno, inibindo warnings.
 ----
-175 ate 180(24/09):
+175 até 180(24/09):
 --
 175 = Usando ApiConventions para definir nos retornos valores defaults gerais para códigos de retorno.
 --
@@ -355,19 +357,19 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 --
 180 = Implementando e realizando os testes implementados.
 ----
-181 ate 182(30/09):
+181 até 182(30/09):
 --
 181 = Testes Unitários para Post
 --
 182 = Testes Unitários para Put
 ----
-183 ate 184 (01/10):
+183 até 184 (01/10):
 --
 183 = Testes Unitários para Delete
 --
 184 = Explicando a Clean Arquiteture (com criação de vários projetos internos a API que terão seus pontos específicos)
 ----
-185 ate 192(08/10):
+185 até 192(08/10):
 --
 185 = Criando o novo Solution (Catalogo), criando os projetos dela e realizando a parametrização das dependências.
 --
@@ -382,7 +384,7 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 190 = MemoryCache usado no IMemoryCache (Microsoft.Extensions.Caching.Memory)
     => Set = armazenar valor no cache
     => TryGetValue = tentar obter valor do cache usando uma chave.
-    => GetOrCreate = obter valor de cache pela chave.
+    => GetOrCreaté = obter valor de cache pela chave.
     => GetOrCreateAsync = assíncrono do GetOrCreate
     => Remove = remove um item do cache pela chave
     => Cear() = remover todas as chaves
@@ -392,11 +394,11 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 --
 192 = Implementando o cache do Get para CategoriasController.cs e Program.cs alterados
 ----
-193 ate 193(09/10):
+193 até 193(09/10):
 --
 193 = GET com ID com cache
 ----
-194 ate 196(10/10):
+194 até 196(10/10):
 --
 194 = POST com cache.
 --
@@ -408,7 +410,7 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 --
 198 = Continuação da implementação da melhoria.
 ----
-199 ate 203(11/10):
+199 até 203(11/10):
 --
 199 = Deploy em pasta.
 --
@@ -420,13 +422,13 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 --
 203 = Conceitos.
 ----
-204 ate 205(12/10):
+204 até 205(12/10):
 --
 204 = Descrição das próximas alterações.
 --
 205 = Começando a criação de classes e demais alterações.
 ----
-206 ate 210(13/10):
+206 até 210(13/10):
 --
 206 = Continuação das alterações dos métodos implementados em CategoriaService.cs.
 --
@@ -438,7 +440,7 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 --
 210 = Página para excluir a categoria.
 ----
-211 ate 213(14/10):
+211 até 213(14/10):
 --
 211 = Teoria de como será a implementação para cobrir essa etapa da autenticação.
 --
@@ -446,11 +448,11 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 --
 213 = Criar página de login e o de obter acesso ao Token.
 -----
-214 ate (): 
+214 até (): 
 --
 214 = Criando ProdutoViewModel, IProdutoService  ProdutoService para uso do fluxo de produtos e ajuste pontual no _Layout.cshtml.
 -----
-215 ate 220(17/10):
+215 até 220(17/10):
 --
 215 = Criação dos endpoints para uso na API para Produtos.
 -- 
@@ -464,13 +466,13 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 --
 220 = Excluindo o Produto.
 ----
-221 ate 232(18/10):
+221 até 232(18/10):
 --
 221 até 227 = Não houve aprofundamento no assunto para registrar o novo projeto. Apenas acompanhamento de informações. 
 --
-228 ate 232 = Esse projeto foi criado e está com commit no repositório. Foi simples e sem conexão com banco de dados.
+228 até 232 = Esse projeto foi criado e está com commit no repositório. Foi simples e sem conexão com banco de dados.
 ----
-229 ate 240(19/10):
+229 até 240(19/10):
 --
 229 até 236 = Esse conjunto de aulas não foi elaborado pois usava como banco de dados um banco diferente do em uso atualmente (MySQL) e não havia ganho elaborar o código.
 --
@@ -486,14 +488,14 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 --
 242 = Fluent API para tratar de limitação nas classes de domínio.
 -----
-243 ate 252(20/10):
+243 até 252(20/10):
 --
 243 = Configuração das entidades para serem usadas com as devidas limitações no migrations.
 -- 
 244 = Definição da string de conexão (site connectionstrings.com tem exemplares de como fazer uma string).
 --
 245 = Executando o migrations com o comando no CMD dotnet ef migrations add MigracaoInicial
-    => dotnet ef database update MigracaoInicial - para efetivar a migração
+    => dotnet ef database updaté MigracaoInicial - para efetivar a migração
 --
 246 = Criando os endpoints para a API.
 --
@@ -509,13 +511,13 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 --
 252 = Explicações para a implementação do Jwt
 -----
-253 ate 254(22/10):
+253 até 254(22/10):
 --
 253 = Implementando as classes do ITokenService e TokenService, alterando a classe Program.cs e incluindo validações por endpoint.
 --
 254 = Ajustando o login com Bearer.
 ----
-255 ate 258: Rumando a conclusão do curso.
+255 até 258: Rumando a conclusão do curso.
 --
 259 até 298 = Aulas complementares e assistidas sem criação de código. 
 --
