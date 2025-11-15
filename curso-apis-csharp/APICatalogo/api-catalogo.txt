@@ -1,5 +1,5 @@
 Aulas 1 até 51(Sem Data):
-
+   => Nenhuma tema relevante para aplicar aqui.
 Aulas 49 até 52 (04-08):
 Serialização JSON alterada na classe Program.cs e incluindo na linha do código 
 builder.Services.AddControllers();
@@ -520,4 +520,3 @@ Pacotes para versionamento funcionar: ASP.VERSIONING.MVC.APIEXPLORER e ASP.VERSI
 255 até 258: Rumando a conclusão do curso.
 --
 259 até 298 = Aulas complementares e assistidas sem criação de código. 
---

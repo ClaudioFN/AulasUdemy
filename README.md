@@ -38,4 +38,4 @@ Lista de comandos -
 
 Lista de Comandos - 
 
-- SEM COMANDOS PARA COBRIR EM UMA LISTA
+- SEM COMANDOS PARA LISTAR
