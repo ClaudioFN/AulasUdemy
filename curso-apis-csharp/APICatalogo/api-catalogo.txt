@@ -1,5 +1,6 @@
 Aulas 1 até 51(Sem Data):
    => Nenhuma tema relevante para aplicar aqui.
+-------------------------------------------------------------------------------------------------------------------------------------
 Aulas 49 até 52 (04-08):
 Serialização JSON alterada na classe Program.cs e incluindo na linha do código 
 builder.Services.AddControllers();
