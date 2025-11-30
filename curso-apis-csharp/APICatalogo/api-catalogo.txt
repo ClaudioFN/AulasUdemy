@@ -1,7 +1,7 @@
 Aulas 1 até 51(Sem Data):
    => Nenhuma tema relevante para aplicar aqui.
 -------------------------------------------------------------------------------------------------------------------------------------
-Aulas 49 até 52 (04-08):
+Aulas 49 até 52 (04/08):
 Serialização JSON alterada na classe Program.cs e incluindo na linha do código 
 builder.Services.AddControllers();
 esse item:
@@ -15,7 +15,7 @@ Uso de Try-Catch para tratamento de erros
 Visão do Postman
 --
 --
-Aulas 54 até 59 (05-08):
+Aulas 54 até 59 (05/08):
 54 => Esclarecimento sobre definições de rotas para evitar duplicatas
 --
 55 => [HttpGet("/primeiro")] => a barra (/) faz com que a definição inserida em Route seja ignorada e se use essa nova definição.
@@ -35,7 +35,7 @@ Aulas 54 até 59 (05-08):
    => BindingRequired = obriga o parâmetro a ser obrigatório.
    => BindingNever = para não colocar ele como parte dos endpoints
 ----
-60 (06-08):
+60 (06/08):
 60 = FromService => Permite injetar as dependências diretamente no método Action do Controlador que requer a dependência.
 --
 61 até 64 (08/08): 
@@ -47,12 +47,12 @@ Aulas 54 até 59 (05-08):
 --
 64 = criação de sessões no appsettings.json para incluir dados novos para tratar novos detalhes.
 ----
-65 até 66 (09-08):
+65 até 66 (09/08):
 65 = como ler o arquivo appsettings.json | var valor1 = builder.Configuration["chave1"];
 --
 66 = conceitos sobre middleware
 ----
-67 até 72(10-08):
+67 até 72(10/08):
 67 => UseExceptionHandler = middleware de tratamento de exceções para pegar exceções não tratadas, voltando com erro 500.
 --
 68 => tratativas de filtros para autorizar, gerar exception, logo e cache de maneira personalizada. Antes ou depois de método Action. Inserido no método Action / controlador / globalmente.
